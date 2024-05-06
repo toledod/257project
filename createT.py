@@ -10,8 +10,8 @@ conn = psycopg2.connect(
     
 cur = conn.cursor()
 
-sql = """DROP TABLE IF EXISTS cities;
-CREATE TABLE cities (
+sql = """DROP TABLE IF EXISTS spotify;
+CREATE TABLE spotify (
   name text,
   artists text,
   dailyr int,
