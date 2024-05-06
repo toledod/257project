@@ -28,3 +28,12 @@ cur2.execute( sql2 )
 row2 = cur2.fetchone()
 
 print(row2)
+
+cur3 = conn.cursor()
+
+sql3 = "SELECT * FROM spotify ORDER BY dance DESC"
+
+cur3.execute( sql3 )
+row3 = cur3.fetchone()
+
+print(row3)
