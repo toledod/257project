@@ -34,3 +34,4 @@ CREATE TABLE spotify (
 );"""
 
 cur.execute( sql )
+print("hit execute")
