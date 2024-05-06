@@ -22,7 +22,7 @@ else:
 
 cur2 = conn.cursor()
 
-sql2 = "SELECT * FROM spotify WHERE country='US' ORDER BY dailyr DESC"
+sql2 = "SELECT * FROM spotify WHERE country='US' AND WHERE date='2024-04-30' ORDER BY dailyr DESC"
 
 cur2.execute( sql2 )
 row2 = cur2.fetchone()
