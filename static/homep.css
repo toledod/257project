@@ -9,16 +9,22 @@
 }
 
 .big-button{
+  display: flex;
+  flex: 1;
   text-align: center;
   font-size: large;
 }
 
 .left-button{
+  display: flex;
+  flex: 1;
   text-align: left;
   font-size: large;
 }
 
 .right-button{
+  display: flex;
+  flex: 1;
   text-align: right;
   font-size: large;
 }
