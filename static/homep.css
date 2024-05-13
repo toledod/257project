@@ -12,11 +12,15 @@
   display: flex;
   flex: 1;
   margin: auto;
-  position: center;
   text-align: center;
   font-size: large;
 }
 
+.buttonHolder{
+  display: flex;
+  margin: auto;
+  position: center;
+}
 .left-button{
   display: flex;
   flex: 1;
