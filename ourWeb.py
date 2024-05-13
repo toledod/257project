@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-    message = "Welcome to My Independent Assignment Webpage."
+    message = "Welcome to Our Spotify Widget."
     message = message + " This text was produced by concatenating strings in Python! Isn't that exciting!!"
     return render_template("homepage.html", someText = message)
 
