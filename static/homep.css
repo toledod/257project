@@ -11,13 +11,14 @@
 .big-button{
   display: flex;
   flex: 1 1 0;
+  align-items: center; 
+  justify-content: center;
   padding: 5px;
   margin: 50px;
   font-size: 6vw;
   border-radius: 20px;
   transition-duration: 0.4s;
   cursor: pointer;
-  text-align: center;
 }
 .big-button:hover{
   background-color: #D1FFBD;
