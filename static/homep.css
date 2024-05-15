@@ -23,6 +23,7 @@
   background-color: #D1FFBD;
   border: 2px solid #04AA6D;
   transition-duration: 0.3s;
+  animation: smallz2 850ms linear infinite alternate;
 }
 
 .buttonHolder{
@@ -43,4 +44,14 @@
   flex: 1;
   text-align: right;
   font-size: large;
+}
+
+
+@keyframes smallz{
+    from{
+        transform: scale(100%);
+    }
+    to{
+        transform: scale(99.5%);
+    }
 }
