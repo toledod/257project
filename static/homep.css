@@ -13,11 +13,11 @@
   flex: 1 1 0;
   padding: 5px;
   margin: 50px;
-  text-align: center;
   font-size: 6vw;
   border-radius: 20px;
   transition-duration: 0.4s;
   cursor: pointer;
+  text-align: center;
 }
 .big-button:hover{
   background-color: #D1FFBD;
@@ -52,6 +52,6 @@
         transform: scale(100%);
     }
     to{
-        transform: scale(98.5%);
+        transform: scale(99%);
     }
 }
