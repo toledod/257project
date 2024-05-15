@@ -53,15 +53,15 @@
 }
 
 .mainNav{
+  display: flex;
   margin: auto;
   background-color: #33d62d;
 }
 
 #homeNav{
-  align-content: left;
 }
 #aboutNav{
-  align-content: right;
+  align-self: flex-end;
 }
 
 
