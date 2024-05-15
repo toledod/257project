@@ -12,15 +12,17 @@
   display: flex;
   flex: 1 1 0;
   padding: 5px;
-  margin: 10px;
+  margin: 50px;
   text-align: center;
   font-size: 6vw;
+  border-radius: 20px;
 }
 
 .buttonHolder{
   display: flex;
   flex: 1 1 0;
   position: center;
+  text-align: center;
 }
 .left-button{
   display: flex;
