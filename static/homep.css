@@ -47,6 +47,10 @@
   font-size: large;
 }
 
+.songHolderHome{
+  margin: 300;
+}
+
 
 @keyframes smallz{
     from{
