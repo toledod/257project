@@ -10,7 +10,7 @@
 
 .big-button{
   display: flex;
-  flex: 1 1 0
+  flex: 0;
   padding: 5px;
   margin: auto;
   text-align: center;
@@ -19,6 +19,7 @@
 
 .buttonHolder{
   display: flex;
+  flex: 1 1 0;
   position: center;
 }
 .left-button{
