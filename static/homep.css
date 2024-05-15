@@ -11,7 +11,7 @@
 .big-button{
   display: flex;
   flex: 1;
-  margin: auto;
+  margin: 5% 0;
   text-align: center;
   font-size: large;
 }
