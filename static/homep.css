@@ -18,7 +18,7 @@
 }
 
 .buttonHolder{
-  display: inline-block;
+  display: flex;
   position: center;
 }
 .left-button{
