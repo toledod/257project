@@ -11,11 +11,11 @@
 .big-button{
   display: flex;
   flex: 0;
-  width: 500px;
+  width: 2500px;
   padding: 5px;
   margin: auto;
   text-align: center;
-  font-size: large;
+  font-size: 100px;
 }
 
 .buttonHolder{
