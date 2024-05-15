@@ -21,6 +21,7 @@
 }
 .big-button:hover{
   background-color: #D1FFBD;
+  border: none;
 }
 
 .buttonHolder{
