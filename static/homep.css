@@ -57,7 +57,11 @@
   background-color: #33d62d;
 }
 
-#mainNav{
+#homeNav{
+  align-content: left;
+}
+#aboutNav{
+  align-content: right;
 }
 
 
