@@ -23,7 +23,7 @@
   background-color: #D1FFBD;
   border: 2px solid #04AA6D;
   transition-duration: 0.3s;
-  animation: smallz2 850ms linear infinite alternate;
+  animation: smallz 850ms linear infinite alternate;
 }
 
 .buttonHolder{
