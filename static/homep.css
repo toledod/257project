@@ -9,7 +9,7 @@
 }
 
 .big-button{
-  display: flex;
+  display: inline-block;
   flex: 0;
   padding: 5px;
   margin: auto;
