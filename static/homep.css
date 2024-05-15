@@ -16,16 +16,11 @@
   text-align: center;
   font-size: 6vw;
   border-radius: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
-big-button:hover{
-  display: flex;
-  color: redl;
-  flex: 1 1 0;
-  padding: 5px;
-  margin: 50px;
-  text-align: center;
-  font-size: 6vw;
-  border-radius: 20px;
+.big-button:hover{
+  background-color: #D1FFBD;
 }
 
 .buttonHolder{
