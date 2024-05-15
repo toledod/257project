@@ -12,7 +12,8 @@
   display: flex;
   flex: 0;
   width: 500px;
-  padding: 50px;
+  padding: 5px;
+  margin: auto;
   text-align: center;
   font-size: large;
 }
