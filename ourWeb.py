@@ -15,7 +15,7 @@ def month():
 
 @app.route('/day')
 def month():
-    return render_template("day.html")
+    return render_template("day2.html")
 
 @app.route('/surprise')
 def month():
