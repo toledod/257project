@@ -24,4 +24,5 @@ function updateDays() {
   }
   daySelect.innerHTML = options;
 }
-    
+
+window.onload = updateDays;
