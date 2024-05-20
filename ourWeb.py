@@ -22,7 +22,7 @@ def surprise():
     return render_template("surprise.html")
 
 @app.route('/about')
-def surprise():
+def about():
     return render_template("about.html")
     
 
