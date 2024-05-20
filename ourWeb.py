@@ -20,6 +20,10 @@ def day():
 @app.route('/surprise')
 def surprise():
     return render_template("surprise.html")
+
+@app.route('/about')
+def surprise():
+    return render_template("about.html")
     
 
 
