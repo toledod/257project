@@ -64,6 +64,8 @@
   margin: auto;
   background-color: #33d62d;
   justify-content: space-between;
+  text-decoration: none;
+  font-size: 30px;
 }
 
 #homeNav{
