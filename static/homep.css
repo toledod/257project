@@ -27,6 +27,10 @@
   animation: smallz 850ms linear infinite alternate;
 }
 .linkInButton{
+  display: flex;
+  flex: 1 1 0;
+  position: center;
+  text-align: center;
   text-decoration: none;
 }
 
