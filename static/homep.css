@@ -26,6 +26,9 @@
   transition-duration: 0.3s;
   animation: smallz 850ms linear infinite alternate;
 }
+.linkInButton{
+  text-decoration: none;
+}
 
 .buttonHolder{
   display: flex;
