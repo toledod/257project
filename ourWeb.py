@@ -14,11 +14,11 @@ def month():
     return render_template("month.html")
 
 @app.route('/day')
-def month():
+def day():
     return render_template("day2.html")
 
 @app.route('/surprise')
-def month():
+def surprise():
     return render_template("surprise.html")
     
 
