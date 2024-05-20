@@ -12,6 +12,14 @@ def welcome():
 @app.route('/month')
 def month():
     return render_template("month.html")
+
+@app.route('/day')
+def month():
+    return render_template("day.html")
+
+@app.route('/surprise')
+def month():
+    return render_template("surprise.html")
     
 
 
