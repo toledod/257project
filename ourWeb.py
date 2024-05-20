@@ -9,6 +9,13 @@ def welcome():
     message = message + " This text was produced by concatenating strings in Python! Isn't that exciting!!"
     return render_template("homepage.html", someText = message)
 
+@app.route('/month')
+def month():
+    return render_template("month.html")
+    
+
+
+
 if __name__ == '__main__':
     my_port = 5227
     app.run(host='0.0.0.0', port = my_port) 
