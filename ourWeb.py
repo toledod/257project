@@ -38,9 +38,9 @@ def welcome():
         cur.execute(sql, [energyInt])
         result = cur.fetchone()
         if result is None: 
-            print("No results found for dance value:", energyInt)
+            print("No results found for energy value:", energyInt)
         else:
-            print("Result found for dance value:", result)
+            print("Result found for energy value:", result)
     return render_template("homepage.html", someText = result[0])
 
 @app.route('/month')
