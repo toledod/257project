@@ -27,9 +27,11 @@
       </select>
     
     <label> Choose a Day:</label>
-        <select id="days" name="days">
+        <select id="days" name="days" onchange="updateSong()">
           
         </select>
+     
+    <button type="submit">Submit</button>
    </form>
 </div>
  <script>
@@ -37,7 +39,18 @@
           const month = document.getElementById('month').value; // Get selected month value
           const daysSelect = document.getElementById('days'); // Get the days select element
           const daysInMonth = new Date(2024, month, 0).getDate(); // Calculate number of days in selected month
+          
+         
+      }
 
+      // Initialize the days dropdown based on the default month value when the page loads
+      document.addEventListener('DOMContentLoaded', updateDays);
+    </script>
+ <script>
+      function updateSong() {
+          month = document.getElementById('month').value; // Get selected month value
+          daysSelect = document.getElementById('days'); // Get the days select element
+        
           // Generate the options for the days
           let options = '';
           for (let day = 1; day <= daysInMonth; day++) {
