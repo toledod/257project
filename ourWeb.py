@@ -23,13 +23,13 @@ def welcome():
         sql = "SELECT * FROM spotify WHERE dance = %s"
         danceInt = random.random()
         cur.execute(sql, [danceInt])
-        result = cur.fetchone()
+        result1 = cur.fetchone()
     else:
         sql = "SELECT * FROM spotify WHERE energy = %s"
         energyInt = random.random()
         cur.execute(sql, [energyInt])
-        result = cur.fetchone()
-    return render_template("homepage.html", someText = result)
+        result1 = cur.fetchone()
+    return render_template("homepage.html", someText = result[0])
 
 @app.route('/month')
 def month():
