@@ -37,6 +37,16 @@ def month():
 
 @app.route('/day')
 def day():
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="toledod",
+        user="toledod",
+        password="mask777glass")
+    
+    cur = conn.cursor()
+    sql = "SELECT * FROM spotify WHERE dance = %s"
+    
     return render_template("day2.html")
 
 @app.route('/surprise')
