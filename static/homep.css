@@ -67,11 +67,12 @@
   text-decoration: none;
   font-size: 30px;
 }
-
-#homeNav{
+.homeNav{
+  text-decoration: none;
 }
-#aboutNav{
-  align-self: flex-end;
+
+.aboutNav{
+  text-decoration: none;
 }
 
 
