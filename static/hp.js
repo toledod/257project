@@ -1,4 +1,4 @@
-function updateDays() {
+function updateDays2() {
   month = document.getElementById('month').value;
   daySelect = document.getElementById('day');
   daysInMonth = new Date(2024, month, 0).getDate(); 
