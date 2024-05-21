@@ -55,12 +55,12 @@ def surprise():
         sql = "SELECT * FROM spotify WHERE dance = %s"
         danceInt = random.random()
         cur.execute(sql, [danceInt])
-        cities_from_state = cur5.fetchone()
+        result = cur.fetchone()
     else:
         sql = "SELECT * FROM spotify WHERE energy = %s"
         energyInt = random.random()
         cur.execute(sql, [energyInt])
-        cities_from_state = cur.fetchone()
+        result = cur.fetchone()
 
     return render_template("surprise.html")
 
