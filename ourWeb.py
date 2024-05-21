@@ -20,7 +20,7 @@ def welcome():
 
     randomInteger = random.randint(1, 2)
     if randomInteger == 1:
-         sql = "SELECT * FROM spotify WHERE dance >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 1 AND 4"
+        sql = "SELECT * FROM spotify WHERE dance >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 1 AND 4"
         danceInt = random.uniform(0.0, 0.967)
         # danceInt = round(danceInt, 1)
         print("danceInt is: ", danceInt)
