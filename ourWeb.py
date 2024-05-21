@@ -21,7 +21,7 @@ def welcome():
     randomInteger = random.randint(1, 2)
     if randomInteger == 1:
         sql = "SELECT * FROM spotify WHERE dance >= %s"
-        danceInt = random.uniform(0.5, 1.0)
+        danceInt = random.uniform(0.5, 0.99)
         danceInt = round(danceInt, 1)
         print("danceInt is: ", danceInt)
         cur.execute(sql, [danceInt])
@@ -32,7 +32,7 @@ def welcome():
             print("Result found for dance value:", result)
     else:
         sql = "SELECT * FROM spotify WHERE energy >= %s"
-        energyInt = random.uniform(0.5, 1.5)
+        energyInt = random.uniform(0.5, .99)
         energyInt = round(energyInt, 1)
         print("energyInt is: ", energyInt)
         cur.execute(sql, [energyInt])
@@ -41,6 +41,7 @@ def welcome():
             print("No results found for energy value:", energyInt)
         else:
             print("Result found for energy value:", result)
+            
     return render_template("homepage.html", someText = result[0])
 
 @app.route('/month')
