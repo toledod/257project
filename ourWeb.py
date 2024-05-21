@@ -20,7 +20,7 @@ def welcome():
 
     randomInteger = random.randint(1, 2)
     if randomInteger == 1:
-        sql = "SELECT * FROM spotify WHERE dance >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 1 AND 4"
+        sql = "SELECT * FROM spotify WHERE dance >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 2 AND 4"
         danceInt = random.uniform(0.0, 0.967)
         # danceInt = round(danceInt, 1)
         print("danceInt is: ", danceInt)
@@ -29,7 +29,7 @@ def welcome():
         val = random.randint(0, 19)
 
     else:
-        sql = "SELECT * FROM spotify WHERE energy >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 1 AND 4"
+        sql = "SELECT * FROM spotify WHERE energy >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 2 AND 4"
         
         energyInt = random.uniform(0.0, .963)
         # energyInt = round(energyInt, 1)
