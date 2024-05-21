@@ -25,7 +25,8 @@ def welcome():
         # danceInt = round(danceInt, 1)
         print("danceInt is: ", danceInt)
         cur.execute(sql, [danceInt])
-        result = cur.fetchone()
+        result = cur.fetchmany(5)
+        val = random.randint(0, 4)
         if result is None: 
             print("No results found for dance value:", danceInt)
         else:
@@ -36,13 +37,14 @@ def welcome():
         # energyInt = round(energyInt, 1)
         print("energyInt is: ", energyInt)
         cur.execute(sql, [energyInt])
-        result = cur.fetchone()
+        result = cur.fetchmany(5)
+        val = random.randint(0, 4)
         if result is None: 
             print("No results found for energy value:", energyInt)
         else:
             print("Result found for energy value:", result)
             
-    return render_template("homepage.html", someText = result[0])
+    return render_template("homepage.html", someText = result[val][0])
 
 @app.route('/month')
 def month():
