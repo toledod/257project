@@ -20,7 +20,7 @@ def welcome():
 
     randomInteger = random.randint(1, 2)
     if randomInteger == 1:
-        sql = "SELECT * FROM spotify WHERE dance >= %s AND country = US"
+        sql = "SELECT * FROM spotify WHERE dance >= %s AND country = 'US'"
         danceInt = random.uniform(0.5, 0.99)
         danceInt = round(danceInt, 1)
         print("danceInt is: ", danceInt)
@@ -31,7 +31,7 @@ def welcome():
         else:
             print("Result found for dance value:", result)
     else:
-        sql = "SELECT * FROM spotify WHERE energy >= %s AND country = US"
+        sql = "SELECT * FROM spotify WHERE energy >= %s AND country = 'US'"
         energyInt = random.uniform(0.5, .99)
         energyInt = round(energyInt, 1)
         print("energyInt is: ", energyInt)
