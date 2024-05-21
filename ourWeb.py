@@ -25,16 +25,20 @@ def welcome():
         danceInt = round(danceInt, 1)
         cur.execute(sql, [danceInt])
         result = cur.fetchone()
-        if result == None: 
-            result == danceInt
+        if result is None: 
+            print("No results found for dance value:", danceInt)
+        else:
+            print("Result found for dance value:", result)
     else:
         sql = "SELECT * FROM spotify WHERE energy = %s"
         energyInt = random.uniform(0.5, 1.5)
         energyInt = round(energyInt, 1)
         cur.execute(sql, [energyInt])
         result = cur.fetchone()
-        if result == None: 
-            result == energyInt
+        if result is None: 
+            print("No results found for dance value:", danceInt)
+        else:
+            print("Result found for dance value:", result)
     return render_template("homepage.html", someText = result[0])
 
 @app.route('/month')
