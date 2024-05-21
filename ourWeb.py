@@ -28,8 +28,9 @@ def welcome():
         if result == None: 
             result == danceInt
     else:
-        sql = "SELECT * FROM spotify WHERE energy = %f"
+        sql = "SELECT * FROM spotify WHERE energy = ?"
         energyInt = random.uniform(0.5, 1.5)
+        energyInt = round(energyInt, 1)
         cur.execute(sql, [energyInt])
         result = cur.fetchone()
         if result == None: 
