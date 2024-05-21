@@ -23,7 +23,7 @@ def welcome():
         sql = "SELECT * FROM spotify WHERE dance = %s"
         danceInt = random.uniform(0.5, 1.0)
         danceInt = round(danceInt, 1)
-        print("danceInt is: ", danceint)
+        print("danceInt is: ", danceInt)
         cur.execute(sql, [danceInt])
         result = cur.fetchone()
         if result is None: 
