@@ -8,6 +8,5 @@ function updateDays() {
     options += `<option value="${day}">${day}</option>`;
   }
   daySelect.innerHTML = options;
+  document.addEventListener('DOMContentLoaded', updateDays);
 }
-
-window.onload = updateDays;
