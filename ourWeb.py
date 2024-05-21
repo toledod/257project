@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+import random
 
 app = Flask(__name__)
 
@@ -7,6 +8,26 @@ app = Flask(__name__)
 def welcome():
     message = "Welcome to Our Spotify Widget."
     message = message + " This text was produced by concatenating strings in Python! Isn't that exciting!!"
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="toledod",
+        user="toledod",
+        password="mask777glass")
+    
+    cur = conn.cursor()
+
+    randomInteger = random.randint(1, 2)
+    if randomInteger == 1:
+        sql = "SELECT * FROM spotify WHERE dance = %s"
+        danceInt = random.random()
+        cur.execute(sql, [danceInt])
+        cities_from_state = cur5.fetchone()
+    else:
+        sql = "SELECT * FROM spotify WHERE energy = %s"
+        energyInt = random.random()
+        cur.execute(sql, [energyInt])
+        cities_from_state = cur.fetchone()
     return render_template("homepage.html", someText = message)
 
 @app.route('/month')
@@ -19,6 +40,27 @@ def day():
 
 @app.route('/surprise')
 def surprise():
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="toledod",
+        user="toledod",
+        password="mask777glass")
+    
+    cur = conn.cursor()
+
+    randomInteger = random.randint(1, 2)
+    if randomInteger == 1:
+        sql = "SELECT * FROM spotify WHERE dance = %s"
+        danceInt = random.random()
+        cur.execute(sql, [danceInt])
+        cities_from_state = cur5.fetchone()
+    else:
+        sql = "SELECT * FROM spotify WHERE energy = %s"
+        energyInt = random.random()
+        cur.execute(sql, [energyInt])
+        cities_from_state = cur.fetchone()
+
     return render_template("surprise.html")
 
 @app.route('/about')
