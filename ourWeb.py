@@ -32,7 +32,8 @@ def welcome():
         else:
             print("Result found for dance value:", result)
     else:
-        sql = "SELECT * FROM spotify WHERE energy >= %s AND country = 'US'"
+        sql = "SELECT * FROM spotify WHERE energy >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 1 AND 4"
+        
         energyInt = random.uniform(0.0, .963)
         # energyInt = round(energyInt, 1)
         print("energyInt is: ", energyInt)
