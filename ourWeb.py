@@ -29,7 +29,7 @@ def welcome():
         energyInt = random.random()
         cur.execute(sql, [energyInt])
         result1 = cur.fetchone()
-    return render_template("homepage.html", someText = result[0])
+    return render_template("homepage.html", someText = result)
 
 @app.route('/month')
 def month():
