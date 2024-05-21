@@ -27,10 +27,7 @@ def welcome():
         cur.execute(sql, [danceInt])
         result = cur.fetchmany(20)
         val = random.randint(0, 19)
-        if result is None: 
-            print("No results found for dance value:", danceInt)
-        else:
-            print("Result found for dance value:", result)
+
     else:
         sql = "SELECT * FROM spotify WHERE energy >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 1 AND 4"
         
@@ -40,10 +37,6 @@ def welcome():
         cur.execute(sql, [energyInt])
         result = cur.fetchmany(20)
         val = random.randint(0, 19)
-        if result is None: 
-            print("No results found for energy value:", energyInt)
-        else:
-            print("Result found for energy value:", result)
             
     return render_template("homepage.html", someText = result[val][0], someDate = result[val][6])
 
