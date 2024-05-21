@@ -44,7 +44,7 @@ def welcome():
         else:
             print("Result found for energy value:", result)
             
-    return render_template("homepage.html", someText = result[val][0])
+    return render_template("homepage.html", someText = result[val][0], someDate = result[val][6])
 
 @app.route('/month')
 def month():
