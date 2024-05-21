@@ -23,6 +23,7 @@ def welcome():
         sql = "SELECT * FROM spotify WHERE dance = %s"
         danceInt = random.uniform(0.5, 1.0)
         danceInt = round(danceInt, 1)
+        print("danceInt is: " danceint)
         cur.execute(sql, [danceInt])
         result = cur.fetchone()
         if result is None: 
@@ -33,10 +34,11 @@ def welcome():
         sql = "SELECT * FROM spotify WHERE energy = %s"
         energyInt = random.uniform(0.5, 1.5)
         energyInt = round(energyInt, 1)
+        print("energyInt is: " energyInt)
         cur.execute(sql, [energyInt])
         result = cur.fetchone()
         if result is None: 
-            print("No results found for dance value:", danceInt)
+            print("No results found for dance value:", energyInt)
         else:
             print("Result found for dance value:", result)
     return render_template("homepage.html", someText = result[0])
