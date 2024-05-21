@@ -24,11 +24,15 @@ def welcome():
         danceInt = random.uniform(0.5, 1.0)
         cur.execute(sql, [danceInt])
         result = cur.fetchone()
+        if result == None: 
+            result == danceInt
     else:
         sql = "SELECT * FROM spotify WHERE energy = %s"
         energyInt = random.uniform(0.5, 1.5)
         cur.execute(sql, [energyInt])
         result = cur.fetchone()
+        if result == None: 
+            result == danceInt
     return render_template("homepage.html", someText = result[0])
 
 @app.route('/month')
