@@ -68,29 +68,29 @@
   font-size: 30px;
 }
 .homeNav{
-  color: white;
+  color: black;
   text-decoration: none;
 }
 .homeNav:visited{
-  color: white;
+  color: black;
   text-decoration: none;
 }
 .homeNav:hover{
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 
 .aboutNav{
-  color: white;
+  color: black;
   text-decoration: none;
 }
 .aboutNav:visited{
-  color: white;
+  color: black;
   text-decoration: none;
 }
 .aboutNav:hover{
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
