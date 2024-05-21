@@ -23,7 +23,7 @@ def welcome():
         sql = "SELECT * FROM spotify WHERE dance = %s"
         danceInt = random.random()
         cur.execute(sql, [danceInt])
-        result = cur5.fetchone()
+        result = cur.fetchone()
     else:
         sql = "SELECT * FROM spotify WHERE energy = %s"
         energyInt = random.random()
