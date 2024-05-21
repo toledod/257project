@@ -32,7 +32,7 @@ def welcome():
         cur.execute(sql, [energyInt])
         result = cur.fetchone()
         if result == None: 
-            result == danceInt
+            result == energyInt
     return render_template("homepage.html", someText = result[0])
 
 @app.route('/month')
