@@ -25,8 +25,8 @@ def welcome():
         # danceInt = round(danceInt, 1)
         print("danceInt is: ", danceInt)
         cur.execute(sql, [danceInt])
-        result = cur.fetchmany(5)
-        val = random.randint(0, 4)
+        result = cur.fetchmany(20)
+        val = random.randint(0, 19)
         if result is None: 
             print("No results found for dance value:", danceInt)
         else:
@@ -37,8 +37,8 @@ def welcome():
         # energyInt = round(energyInt, 1)
         print("energyInt is: ", energyInt)
         cur.execute(sql, [energyInt])
-        result = cur.fetchmany(5)
-        val = random.randint(0, 4)
+        result = cur.fetchmany(20)
+        val = random.randint(0, 19)
         if result is None: 
             print("No results found for energy value:", energyInt)
         else:
