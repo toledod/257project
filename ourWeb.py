@@ -22,7 +22,7 @@ def welcome():
     if randomInteger == 1:
         sql = "SELECT * FROM spotify WHERE dance >= %s AND country = 'US'"
         danceInt = random.uniform(0.5, 0.99)
-        danceInt = round(danceInt, 1)
+        # danceInt = round(danceInt, 1)
         print("danceInt is: ", danceInt)
         cur.execute(sql, [danceInt])
         result = cur.fetchone()
@@ -33,7 +33,7 @@ def welcome():
     else:
         sql = "SELECT * FROM spotify WHERE energy >= %s AND country = 'US'"
         energyInt = random.uniform(0.5, .99)
-        energyInt = round(energyInt, 1)
+        # energyInt = round(energyInt, 1)
         print("energyInt is: ", energyInt)
         cur.execute(sql, [energyInt])
         result = cur.fetchone()
