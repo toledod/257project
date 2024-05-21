@@ -22,7 +22,7 @@ conn = psycopg2.connect(
 
 cur2 = conn.cursor()
 
-sql2 = "SELECT * FROM spotify WHERE country='US' ORDER BY dance DESC"
+sql2 = "SELECT * FROM spotify WHERE country='US' ORDER BY energy DESC"
 
 cur2.execute( sql2 )
 row2 = cur2.fetchone()
