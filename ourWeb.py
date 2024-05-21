@@ -20,14 +20,14 @@ def welcome():
 
     randomInteger = random.randint(1, 2)
     if randomInteger == 1:
-        sql = "SELECT * FROM spotify WHERE dance = %s"
+        sql = "SELECT * FROM spotify WHERE dance = %f"
         danceInt = random.uniform(0.5, 1.0)
         cur.execute(sql, [danceInt])
         result = cur.fetchone()
         if result == None: 
             result == danceInt
     else:
-        sql = "SELECT * FROM spotify WHERE energy = %s"
+        sql = "SELECT * FROM spotify WHERE energy = %f"
         energyInt = random.uniform(0.5, 1.5)
         cur.execute(sql, [energyInt])
         result = cur.fetchone()
