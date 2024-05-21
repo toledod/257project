@@ -11,7 +11,7 @@
 
 <div class = "dayDisplay">
   <p>
-    SONG OF THE DAY GOES HERE
+    {{song}}
   </p>
 </div>
 
@@ -36,10 +36,10 @@
 </div>
  <script>
       function updateDays() {
-          const month = document.getElementById('month').value; // Get selected month value
-          const daysSelect = document.getElementById('days'); // Get the days select element
-          const daysInMonth = new Date(2024, month, 0).getDate(); // Calculate number of days in selected month
-
+          const month = document.getElementById('month').value; 
+          const daysSelect = document.getElementById('days');
+          const daysInMonth = new Date(2024, month, 0).getDate();
+        
           // Generate the options for the days
           let options = '';
           for (let day = 1; day <= daysInMonth; day++) {
