@@ -21,12 +21,12 @@ def welcome():
     randomInteger = random.randint(1, 2)
     if randomInteger == 1:
         sql = "SELECT * FROM spotify WHERE dance = %s"
-        danceInt = random.random()
+        danceInt = random.uniform(0.5, 1.0)
         cur.execute(sql, [danceInt])
         result = cur.fetchone()
     else:
         sql = "SELECT * FROM spotify WHERE energy = %s"
-        energyInt = random.random()
+        energyInt = random.uniform(0.5, 1.5)
         cur.execute(sql, [energyInt])
         result = cur.fetchone()
     return render_template("homepage.html", someText = result[0])
