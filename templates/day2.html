@@ -39,35 +39,12 @@
           month = document.getElementById('month').value; 
           daysSelect = document.getElementById('days');
           daysInMonth = new Date(2024, month, 0).getDate();
-        
-          // Generate the options for the days
+
           let options = '';
           for (let day = 1; day <= daysInMonth; day++) {
               options += `<option value="${day}">${day}</option>`;
           }
-
-          // Set the generated options as the inner HTML of the days select element
           daysSelect.innerHTML = options;
       }
-
-      // Initialize the days dropdown based on the default month value when the page loads
-      document.addEventListener('DOMContentLoaded', updateDays);
-    </script>
- <script>
-      function updateSong() {
-          month = document.getElementById('month').value; // Get selected month value
-          daysSelect = document.getElementById('days'); // Get the days select element
-        
-          // Generate the options for the days
-          let options = '';
-          for (let day = 1; day <= daysInMonth; day++) {
-              options += `<option value="${day}">${day}</option>`;
-          }
-
-          // Set the generated options as the inner HTML of the days select element
-          daysSelect.innerHTML = options;
-      }
-
-      // Initialize the days dropdown based on the default month value when the page loads
       document.addEventListener('DOMContentLoaded', updateDays);
     </script>
