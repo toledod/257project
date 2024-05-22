@@ -44,7 +44,7 @@ def welcome():
 def month():
     return render_template("month.html")
 
-@app.route('/day)
+@app.route('/day')
 def day(month, day):
     conn = psycopg2.connect(
         host="localhost",
