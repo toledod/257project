@@ -54,8 +54,8 @@ def day(month, day):
         password="mask777glass")
     
     cur = conn.cursor()
-    sql = "SELECT * FROM spotify WHERE AND EXTRACT(DAY FROM date) = %s AND EXTRACT(MONTH FROM date) = %s"
-    cur.execute(sql, [energyInt])
+    # sql = "SELECT * FROM spotify WHERE AND EXTRACT(DAY FROM date) = %s AND EXTRACT(MONTH FROM date) = %s"
+    # cur.execute(sql, [energyInt])
     
     return render_template("day2.html")
 
