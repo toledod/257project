@@ -44,8 +44,8 @@ def welcome():
 def month():
     return render_template("month.html")
 
-@app.route('/day')
-def day():
+@app.route('/day/<month>/<day>')
+def day(month, day):
     conn = psycopg2.connect(
         host="localhost",
         port=5432,   
@@ -54,7 +54,8 @@ def day():
         password="mask777glass")
     
     cur = conn.cursor()
-    sql = "SELECT * FROM spotify WHERE dance = %s"
+    sql = "SELECT * FROM spotify WHERE AND EXTRACT(DAY FROM date) = %s AND EXTRACT(MONTH FROM date) = %s"
+    cur.execute(sql, [energyInt])
     
     return render_template("day2.html")
 
