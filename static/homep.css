@@ -94,7 +94,9 @@
   text-decoration: none;
 }
 
-
+#songNameHome{
+  font-size: 20px;
+}
 
 @keyframes smallz{
     from{
