@@ -78,7 +78,7 @@ def surprise():
         val = random.randint(0, 29)
 
     return render_template("surprise.html", someTitle = result[val][0], someArtist = result[val][1], someRank = result[val][2], 
-                          explict = result[val][8]), popScore = result[val][7]))
+                          explict = result[val][8]), popScore = result[val][7])
 
 @app.route('/about')
 def about():
