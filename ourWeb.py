@@ -66,17 +66,19 @@ def surprise():
 
     randomInteger = random.randint(1, 2)
     if randomInteger == 1:
-        sql = "SELECT * FROM spotify WHERE dance = %s"
-        danceInt = random.random()
-        cur.execute(sql, [danceInt])
-        result = cur.fetchone()
-    else:
-        sql = "SELECT * FROM spotify WHERE energy = %s"
-        energyInt = random.random()
-        cur.execute(sql, [energyInt])
-        result = cur.fetchone()
+        sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 ORDER BY dance DESC"
+        cur.execute(sql)
+        result = cur.fetchmany(30)
+        val = random.randint(0, 29)
 
-    return render_template("surprise.html")
+    else:
+        sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 ORDER BY energy DESC"
+        cur.execute(sql)
+        result = cur.fetchmany(30)
+        val = random.randint(0, 29)
+
+    return render_template("surprise.html", someTitle = result[val][0], someArtist = result[val][1], someRank = result[val][2], 
+                          explict = result[val][8]), popScore = result[val][7]))
 
 @app.route('/about')
 def about():
