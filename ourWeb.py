@@ -6,7 +6,7 @@ import psycopg2
 app = Flask(__name__)
 
 @app.route('/')
-def welcome():
+def pickSongForHome():
     conn = psycopg2.connect(
         host="localhost",
         port=5432,   
@@ -15,7 +15,24 @@ def welcome():
         password="mask777glass")
     
     cur = conn.cursor()
-    pickSong()
+    # pick a number 1 or 2, this will deicde if we get a song based off of dancablity (1) or energy (2)
+    randomInteger = random.randint(1, 2)
+    if randomInteger == 1:
+        sql = "SELECT * FROM spotify WHERE dance >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 2 AND 4"
+        danceInt = random.uniform(0.0, 0.967)
+        cur.execute(sql, [danceInt])
+        result = cur.fetchmany(20)
+        val = random.randint(0, 19)
+
+    else:
+        sql = "SELECT * FROM spotify WHERE energy >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 2 AND 4"
+        
+        energyInt = random.uniform(0.0, .963)
+        cur.execute(sql, [energyInt])
+        result = cur.fetchmany(20)
+        val = random.randint(0, 19)
+
+    return render_template("homepage.html", someTitle = result[val][0], someArtist = result[val][1])
 
 @app.route('/month')
 def month():
@@ -68,26 +85,6 @@ def about():
 
 
 
-
-def pickSong():
-    # pick a number 1 or 2, this will deicde if we get a song based off of dancablity (1) or energy (2)
-    randomInteger = random.randint(1, 2)
-    if randomInteger == 1:
-        sql = "SELECT * FROM spotify WHERE dance >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 2 AND 4"
-        danceInt = random.uniform(0.0, 0.967)
-        cur.execute(sql, [danceInt])
-        result = cur.fetchmany(20)
-        val = random.randint(0, 19)
-
-    else:
-        sql = "SELECT * FROM spotify WHERE energy >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 2 AND 4"
-        
-        energyInt = random.uniform(0.0, .963)
-        cur.execute(sql, [energyInt])
-        result = cur.fetchmany(20)
-        val = random.randint(0, 19)
-
-    return render_template("homepage.html", someTitle = result[val][0], someArtist = result[val][1])
 
 
 if __name__ == '__main__':
