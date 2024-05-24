@@ -95,7 +95,8 @@
 }
 
 #songNameHome{
-  font-size: 20px;
+  padding: none;
+  font-size: 40px;
 }
 
 @keyframes smallz{
