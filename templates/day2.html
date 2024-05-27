@@ -22,7 +22,7 @@
 
 
 <div id = "pickMonthDay">
-  <form>
+  <form id = "dateForm" onsubmit = "setAction()">
     <label> Choose a Month:</label>
         <select id="month" name="month" onchange="updateDays()">
             <option value="1">1</option>
@@ -34,8 +34,8 @@
     <label> Choose a Day:</label>
         <select id="days" name="days" onchange="updateSong()">
         </select>
-    <button type="submit" href="/day/<month>/<days>"> Submit </button>
-   </form>
+    <button type="submit"> Submit </button>
+   </form>e
 </div>
  <script>
       function updateDays() {
@@ -49,5 +49,14 @@
           }
           daysSelect.innerHTML = options;
       }
+      document.addEventListener('DOMContentLoaded', updateDays);
+   
+      function setAction() {
+        month = document.getElementById('month').value;
+        day = document.getElementById('days').value;
+        form = document.getElementById('dateForm');
+        form.action = `/day/${month}/${day}`;
+      }
+    
       document.addEventListener('DOMContentLoaded', updateDays);
     </script>
