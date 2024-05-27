@@ -63,16 +63,6 @@
                     options += '<tr>';
                     for (let col = 0; col < tableSql[row].length; col++) {
                         if (col == 2) {
-                            dateCurrent = tableSql[row][col];
-                            if (dateInTable.indexOf(dateCurrent) == -1){
-                                dateInTable.push(dateCurrent)
-                                rightDate = formatDate(tableSql[row][col]);
-                                options += `<td>${rightDate}</td>`;
-                            }
-                            else{
-                                isDupDate = true;
-                                options.splice(0, 2);
-                            }
                         } else {
                             options += `<td>${tableSql[row][col]}</td>`;
                         }
