@@ -24,7 +24,7 @@
 <div id = "pickMonthDay">
   <form id = "dateForm" onsubmit = "setAction()">
     <label> Choose a Month:</label>
-        <select id="month" name="month" onchange="updateDays()" saveSelection();>
+        <select id="month" name="month" onchange="updateDays()">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -32,7 +32,7 @@
       </select>
     
     <label> Choose a Day:</label>
-        <select id="days" name="days" onchange="updateSong()" saveSelection();>
+        <select id="days" name="days" onchange="updateSong()">
         </select>
     <button type="submit"> Submit </button>
    </form>
@@ -57,22 +57,6 @@
         form = document.getElementById('dateForm');
         form.action = `/day/${month}/${day}`;
       }
-      function saveSelection() {
-        month = document.getElementById('month').value;
-        day = document.getElementById('days').value;
-        localStorage.setItem('selectedMonth', month);
-        localStorage.setItem('selectedDay', day);
-      }
-   
     
-      document.addEventListener('DOMContentLoaded', () => {
-    // Retrieve the saved month and day from local storage
-    const savedMonth = localStorage.getItem('selectedMonth');
-    if (savedMonth) {
-      document.getElementById('month').value = savedMonth;
-      updateDays();  // Call updateDays to set the correct number of days
-    } else {
-      updateDays();  // Initialize days if no saved month
-    }
-  });
-  <script>
+      document.addEventListener('DOMContentLoaded', updateDays);
+    </script>
