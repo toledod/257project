@@ -53,15 +53,16 @@ def day(month, day):
         password="mask777glass")
     
     cur = conn.cursor()
-    sql = "SELECT * FROM spotify WHERE EXTRACT(DAY FROM date) = %s AND EXTRACT(MONTH FROM date) = %s ORDER BY dailyr DESC"
+    sql = "SELECT * FROM spotify WHERE EXTRACT(DAY FROM date) = %s AND EXTRACT(MONTH FROM date) = %s AND country = 'US' ORDER BY dailyr DESC"
     cur.execute(sql, [day, month])
 
     topSong = cur.fetchone()
     songName = topSong[0]
     songArtist = topSong[1]
+    songDay = topSong[6]
     
     
-    return render_template("day2.html", songName = songName, songArtist = songArtist)
+    return render_template("day2.html", songName = songName, songArtist = songArtist, songDay = songDay)
 
 @app.route('/surprise')
 def surprise():
