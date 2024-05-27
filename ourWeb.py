@@ -34,9 +34,22 @@ def pickSongForHome():
 
     return render_template("homepage.html", someTitle = result[val][0], someArtist = result[val][1])
 
-@app.route('/month')
-def month():
-    return render_template("month.html")
+@app.route('/month/<month>')
+def month(month):
+     conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="toledod",
+        user="toledod",
+        password="mask777glass")
+    
+    cur = conn.cursor()
+    sql = "SELECT * FROM spotify WHERE EXTRACT(MONTH FROM date) = %s AND country = 'US' ORDER BY dailyr DESC"
+    cur.execute(sql, [month])
+    table = cur.fetchall()
+
+    
+    return render_template("month.html", tablefetch = table)
 
 
 
