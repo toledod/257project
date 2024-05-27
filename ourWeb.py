@@ -44,12 +44,12 @@ def month(month):
         password="mask777glass")
     
     cur = conn.cursor()
-    sql = "SELECT * FROM spotify WHERE EXTRACT(MONTH FROM date) = %s AND country = 'US' ORDER BY dailyr DESC"
+    sql = "SELECT name, artists, date, timems, pop FROM spotify WHERE EXTRACT(MONTH FROM date) = %s AND country = 'US' ORDER BY dailyr DESC"
     cur.execute(sql, [month])
     table = cur.fetchall()
 
     
-    return render_template("month.html", tablefetch = table[0,1,7,8,10])
+    return render_template("month.html", tablefetch = table)
 
 
 
