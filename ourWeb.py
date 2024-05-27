@@ -44,7 +44,7 @@ def month(month):
         password="mask777glass")
     
     cur = conn.cursor()
-    sql = "SELECT name, artists, date, timems, pop FROM spotify WHERE EXTRACT(MONTH FROM date) = %s AND country = 'US' ORDER BY dailyr DESC"
+    sql = "SELECT name, artists, date, pop FROM spotify WHERE EXTRACT(MONTH FROM date) = %s AND country = 'US' ORDER BY dailyr DESC"
     cur.execute(sql, [month])
     table = cur.fetchall()
 
