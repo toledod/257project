@@ -36,7 +36,7 @@ def pickSongForHome():
 
 @app.route('/month/<month>')
 def month(month):
-     conn = psycopg2.connect(
+    conn = psycopg2.connect(
         host="localhost",
         port=5432,   
         database="toledod",
