@@ -55,8 +55,6 @@
 }
 
 .songHolderHome{
-  opacity: 1;
-  transition: opacity 1s ease-out;
   text-align: center;
   margin: 100px;
 }
@@ -97,6 +95,8 @@
 }
 
 #songNameHome{
+  opacity: 1;
+  transition: opacity 1s ease-out;
   padding: none;
   font-size: 40px;
 }
