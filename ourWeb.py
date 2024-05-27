@@ -49,7 +49,7 @@ def month(month):
     table = cur.fetchall()
 
     
-    return render_template("month.html", tablefetch = table)
+    return render_template("month.html", tablefetch = table[0,1,7,8,10])
 
 
 
