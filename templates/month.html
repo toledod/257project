@@ -33,16 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
   tableCreate();
 
   function formatDate(dateString) {
-    const date = new Date(dateString);
-    const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
-    const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
+    date = new Date(dateString);
+    day = date.getDate().toString().padStart(2, '0');
+    month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+    year = date.getFullYear();
+    return `${month}/${day}/${year}`;
   }
 
   function tableCreate() {
-    const tableDisplay = document.getElementById('tablemonth');
-    const tableSql = {{ tablefetch|tojson }};
+    tableDisplay = document.getElementById('tablemonth');
+    tableSql = {{ tablefetch|tojson }};
 
     let options = '';
     for (let row = 0; row < 50; row++) {
