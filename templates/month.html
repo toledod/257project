@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tableSql = {{ tablefetch|tojson }};
 
     let options = '';
-    for (let row = 0; row < tableSql.length; row++) {
+    for (let row = 0; row < 50; row++) {
       options += '<tr>';
       for (let col = 0; col < tableSql[row].length; col++) {
         options += `<td>${tableSql[row][col]}</td>`;
