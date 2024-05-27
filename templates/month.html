@@ -17,7 +17,7 @@
 </div>
 
 
-<form id = "monthDropDown" onsubmit = "setAction()";>
+<form id = "monthDropDown" onsubmit = setAction()>
   <label> Choose a Month:</label>
 <select id = "months">
   <option value="01"> January</option>
@@ -29,23 +29,28 @@
 </form>
 
 <script>
-function tableCreate(){
-  tableDisplay = document.getElementById('tablemonth');
-  tableSql = {{ tablefetch }}
-  
-  for (let row = 0; row <= 50; row++) {
-    let options = '<tr>';
-            for (let col = 0; col <= 7; col++)
-                options += `<td> ${tableSql[row][col]} </td>`;
-            }
-            options += '</tr>';
-        }
-    tableDisplay.innerHTML = options;
-    console. log(options);
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  tableCreate();
 
-  function setAction() {
-      month = document.getElementById('months').value;
-      form.action = `/month/${month}`;
+  function tableCreate() {
+    const tableDisplay = document.getElementById('tablemonth');
+    const tableSql = {{ tablefetch }};
+
+    let options = '';
+    for (let row = 0; row < tableSql.length; row++) {
+      options += '<tr>';
+      for (let col = 0; col < tableSql[row].length; col++) {
+        options += `<td>${tableSql[row][col]}</td>`;
+      }
+      options += '</tr>';
+    }
+    tableDisplay.innerHTML = options;
+    console.log(options);
   }
+});
+  function setAction() {
+    month = document.getElementById('months').value;
+    form = document.getElementById('monthDropDown');
+    form.action = `/month/${month}`;
+}
 </script>
