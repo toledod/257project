@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function tableCreate() {
     const tableDisplay = document.getElementById('tablemonth');
-    const tableSql = {{ tablefetch }};
+    const tableSql = {{ tablefetch|tojson }};
 
     let options = '';
     for (let row = 0; row < tableSql.length; row++) {
