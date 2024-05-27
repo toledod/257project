@@ -19,7 +19,7 @@ def pickSongForHome():
     randomInteger = random.randint(1, 2)
     if randomInteger == 1:
         sql = "SELECT * FROM spotify WHERE dance >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 2 AND 4"
-        danceInt = random.uniform(0.0, 0.96)
+        danceInt = random.uniform(0.0, 0.9)
         cur.execute(sql, [danceInt])
         result = cur.fetchmany(20)
         val = random.randint(0, 19)
