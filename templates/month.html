@@ -1,116 +1,82 @@
-
 <head>
-  <link rel="stylesheet" href="/static/homep.css">
-
-  <script src="/static/hp.js"></script>
+    <link rel="stylesheet" href="/static/homep.css">
+  
+    <script src="/static/hp.js"></script>
 </head>
-
-<nav class = "mainNav">
-  <a class = "homeNav" href="/"> home </a>
-  <a class = "aboutNav" href="/about"> about us </a>
+  
+<nav class="mainNav">
+    <a class="homeNav" href="/"> home </a>
+    <a class="aboutNav" href="/about"> about us </a>
 </nav>
-
-<div class = "chartMonthDisplay">
-  <table style="width:100%" id = "tablemonth">
-
-  </table>
+  
+<div class="chartMonthDisplay">
+    <table style="width:100%" id="tablemonth">
+  
+    </table>
 </div>
-
-
-<form id = "monthDropDown" onsubmit = "setAction();">
-  <label> Choose a Month:</label>
-<select id = "months">
-  <option value="01"> January</option>
-  <option value="02"> Febuary</option>
-  <option value="03"> March</option>
-  <option value="04"> April</option>
-</select>
-  <button type="submit"> Submit </button>
+  
+<form id="monthDropDown" onsubmit="setAction();">
+    <label> Choose a Month:</label>
+    <select id="months">
+        <option value="01"> January</option>
+        <option value="02"> Febuary</option>
+        <option value="03"> March</option>
+        <option value="04"> April</option>
+    </select>
+    <button type="submit"> Submit </button>
 </form>
-
-
+  
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-      tableCreate();
-    
-      function formatDate(dateString) {
-        date = new Date(dateString);
-        day = date.getDate().toString().padStart(2, '0');
-        month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
-        year = date.getFullYear();
-        return `${month}/${day}/${year}`;
-      }
-    
-    //  function tableCreate() {
-    //     tableDisplay = document.getElementById('tablemonth');
-    //     tableSql = {{ tablefetch|tojson }};
-    
-    //     let options = '';
-    //     let songInTable = [];
-    //     for (let row = 0; row < 50; row++) {
-    //         options += '<tr>';
-    //         for (let col = 0; col < tableSql[row].length; col++) {
-    //             if (col == 0) {
-    //                 title = tableSql[row][col];
-    //                 if (songInTable.indexOf(title) == -1) {
-    //                     songInTable.push(title);
-    //                     options += `<td>${tableSql[row][col]}</td>`;
-    //                 } else {
-    //                    break;
-    //                 }
-    //             }
-    //             if (col == 2) {
-    //                 rightDate = formatDate(tableSql[row][col]);
-    //                 options += `<td>${rightDate}</td>`;
-    //             } else {
-    //                 options += `<td>${tableSql[row][col]}</td>`;
-    //             }
-    //         }
-    //         options += '</tr>';
-    //     }
-    //     tableDisplay.innerHTML = options;
-    // }
-      function tableCreate() {
-        tableDisplay = document.getElementById('tablemonth');
-        tableSql = {{ tablefetch|tojson }};
-    
-        let options = '';
-        let songInTable = [];
-        for (let row = 0; row < 100; row++) {
-            let isDuplicate = false;
-            for (let col = 0; col < tableSql[row].length; col++) {
-                if (col == 0) {
-                    title = tableSql[row][col];
-                    if (songInTable.indexOf(title) !== -1) {
-                        isDuplicate = true;
-                        break; // Exit the inner loop if a duplicate is found
-                    }
-                }
-            }
-    
-            if (!isDuplicate) {
-                songInTable.push(title);
-                options += '<tr>';
-                for (let col = 0; col < tableSql[row].length; col++) {
-                    if (col == 2) {
-                        rightDate = formatDate(tableSql[row][col]);
-                        options += `<td>${rightDate}</td>`;
-                    } else {
-                        options += `<td>${tableSql[row][col]}</td>`;
-                    }
-                }
-                options += '</tr>';
-            }
-        }
-        tableDisplay.innerHTML = options;
-    }
-
-      function setAction() {
-        month = document.getElementById('months').value;
-        form = document.getElementById('monthDropDown');
-        form.action = `/month/${month}`;
-      }
-    
+        tableCreate();
       
+        function formatDate(dateString) {
+            date = new Date(dateString);
+            day = date.getDate().toString().padStart(2, '0');
+            month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+            year = date.getFullYear();
+            return `${month}/${day}/${year}`;
+        }
+        
+        function tableCreate() {
+            tableDisplay = document.getElementById('tablemonth');
+            tableSql = {{ tablefetch|tojson }};
+        
+            let options = '';
+            let songInTable = [];
+            for (let row = 0; row < 100; row++) {
+                let isDuplicate = false;
+                for (let col = 0; col < tableSql[row].length; col++) {
+                    if (col == 0) {
+                        title = tableSql[row][col];
+                        if (songInTable.indexOf(title) !== -1) {
+                            isDuplicate = true;
+                            break; // Exit the inner loop if a duplicate is found
+                        }
+                    }
+                }
+        
+                if (!isDuplicate) {
+                    songInTable.push(title);
+                    options += '<tr>';
+                    for (let col = 0; col < tableSql[row].length; col++) {
+                        if (col == 2) {
+                            rightDate = formatDate(tableSql[row][col]);
+                            options += `<td>${rightDate}</td>`;
+                        } else {
+                            options += `<td>${tableSql[row][col]}</td>`;
+                        }
+                    }
+                    options += '</tr>';
+                }
+            }
+            tableDisplay.innerHTML = options;
+        }
+  
+        function setAction() {
+            month = document.getElementById('months').value;
+            form = document.getElementById('monthDropDown');
+            form.action = `/month/${month}`;
+        }
     });
-    </script>
+</script>
