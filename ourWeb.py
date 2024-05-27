@@ -38,6 +38,11 @@ def pickSongForHome():
 def month():
     return render_template("month.html")
 
+
+
+
+
+
 @app.route('/day/<month>/<day>')
 def day(month, day):
     conn = psycopg2.connect(
@@ -48,7 +53,7 @@ def day(month, day):
         password="mask777glass")
     
     cur = conn.cursor()
-    sql = "SELECT * FROM spotify WHERE AND EXTRACT(DAY FROM date) = %s AND EXTRACT(MONTH FROM date) = %s ORDER BY dailyr DESC"
+    sql = "SELECT * FROM spotify WHERE EXTRACT(DAY FROM date) = %s AND EXTRACT(MONTH FROM date) = %s ORDER BY dailyr DESC"
     cur.execute(sql, [day, month])
 
     topSong = cur.fetchone()
