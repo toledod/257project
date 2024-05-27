@@ -11,7 +11,7 @@
 </nav>
 
 <div class = "chartMonthDisplay">
-  <table style="width:100%" id = "tablemonth" tableCreate();>
+  <table style="width:100%" id = "tablemonth" onload = tableCreate();>
 
   </table>
 </div>
@@ -41,6 +41,7 @@ function tableCreate(){
             options += '</tr>';
         }
     tableDisplay.innerHTML = options;
+    console. log(options);
   }
 
   function setAction() {
