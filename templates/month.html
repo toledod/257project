@@ -28,57 +28,67 @@
   
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        tableCreate();
-      
-        function formatDate(dateString) {
-            date = new Date(dateString);
-            day = date.getDate().toString().padStart(2, '0');
-            month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
-            year = date.getFullYear();
-            return `${month}/${day}/${year}`;
-        }
-        
-        function tableCreate() {
-            tableDisplay = document.getElementById('tablemonth');
-            tableSql = {{ tablefetch|tojson }};
-        
-            let options = '';
-            let songInTable = [];
-            let dateInTable = [];
-            for (let row = 0; row < 300; row++) {
-                let isDuplicate = false;
-                let isDupDate = false;
-                for (let col = 0; col < tableSql[row].length; col++) {
-                    if (col == 0) {
-                        title = tableSql[row][col];
-                        if (songInTable.indexOf(title) !== -1) {
-                            isDuplicate = true;
-                            break; // Exit the inner loop if a duplicate is found
-                        }
+    tableCreate();
+  
+    function formatDate(dateString) {
+        date = new Date(dateString);
+        day = date.getDate().toString().padStart(2, '0');
+        month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+        year = date.getFullYear();
+        return `${month}/${day}/${year}`;
+    }
+    
+    function tableCreate() {
+        tableDisplay = document.getElementById('tablemonth');
+        tableSql = {{ tablefetch|tojson }};
+    
+        let options = '';
+        let songInTable = [];
+        let dateInTable = [];
+        for (let row = 0; row < 300; row++) {
+            let isDuplicateSong = false;
+            let isDuplicateDate = false;
+            let title, date;
+            
+            for (let col = 0; col < tableSql[row].length; col++) {
+                if (col == 0) {
+                    title = tableSql[row][col];
+                    if (songInTable.indexOf(title) !== -1) {
+                        isDuplicateSong = true;
+                        break; // Exit the inner loop if a duplicate song is found
                     }
                 }
-        
-                if (!isDuplicate) {
-                    songInTable.push(title);
-                    options += '<tr>';
-                    for (let col = 0; col < tableSql[row].length; col++) {
-                        if (col == 2) {
-                            rightDate = formatDate(tableSql[row][col]);
-                            options += `<td>${rightDate}</td>`;
-                        } else {
-                            options += `<td>${tableSql[row][col]}</td>`;
-                        }
+                if (col == 2) {
+                    date = formatDate(tableSql[row][col]);
+                    if (dateInTable.indexOf(date) !== -1) {
+                        isDuplicateDate = true;
+                        break; // Exit the inner loop if a duplicate date is found
                     }
-                    options += '</tr>';
                 }
             }
-            tableDisplay.innerHTML = options;
+    
+            if (!isDuplicateSong && !isDuplicateDate) {
+                songInTable.push(title);
+                dateInTable.push(date);
+                options += '<tr>';
+                for (let col = 0; col < tableSql[row].length; col++) {
+                    if (col == 2) {
+                        rightDate = formatDate(tableSql[row][col]);
+                        options += `<td>${rightDate}</td>`;
+                    } else {
+                        options += `<td>${tableSql[row][col]}</td>`;
+                    }
+                }
+                options += '</tr>';
+            }
         }
+        tableDisplay.innerHTML = options;
+    }
+});
 
-    });
-    function setAction() {
-            month = document.getElementById('months').value;
-            form = document.getElementById('monthDropDown');
-            form.action = `/month/${month}`;
-        }
+function setAction() {
+    month = document.getElementById('months').value;
+    form = document.getElementById('monthDropDown');
+    form.action = `/month/${month}`;
+}
 </script>
