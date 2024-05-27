@@ -27,7 +27,7 @@ def pickSongForHome():
     else:
         sql = "SELECT * FROM spotify WHERE energy >= %s AND country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) BETWEEN 2 AND 4"
         
-        energyInt = random.uniform(0.0, .963)
+        energyInt = random.uniform(0.0, .96)
         cur.execute(sql, [energyInt])
         result = cur.fetchmany(20)
         val = random.randint(0, 19)
