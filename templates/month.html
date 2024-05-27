@@ -70,7 +70,8 @@
                                 options += `<td>${rightDate}</td>`;
                             }
                             else{
-                                break;
+                                isDupDate = true;
+                                options.splice(0, 2);
                             }
                         } else {
                             options += `<td>${tableSql[row][col]}</td>`;
