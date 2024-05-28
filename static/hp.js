@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             textContainer.textContent = newText;
             textContainer.classList.remove('fade-out');
-        }, 1000); // This should match the duration of the CSS transition
+        }, 2000); // This should match the duration of the CSS transition
     }, 3000); // Change text after 3 seconds (3000 milliseconds)
 });
