@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const textContainer = document.getElementById('songHolderHome');
+    const textContainer = document.getElementById('songNameHome');
     const newText = 'This is the new text.';
 
     // Change text after 3 seconds
