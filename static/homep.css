@@ -95,10 +95,10 @@
 }
 
 #songNameHome{
-  opacity: 1;
-  transition: opacity 5s ease-out;
   padding: none;
   font-size: 40px;
+  opacity: 1;
+  transition: opacity 5s ease-out;
 }
 .fade-out{
   opacity: 0;
