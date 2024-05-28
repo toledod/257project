@@ -96,9 +96,12 @@
 
 #songNameHome{
   opacity: 1;
-  transition: opacity 1s ease-out;
+  transition: opacity 2s ease-out;
   padding: none;
   font-size: 40px;
+}
+.fade-out {
+  opacity: 0;
 }
 
 @keyframes smallz{
