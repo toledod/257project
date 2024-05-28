@@ -11,4 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
     function setTimeout() {
         textContainer.textContent = newText;
         textContainer.classList.remove('fade-out');
+    }
     });
