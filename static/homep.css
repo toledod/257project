@@ -94,12 +94,9 @@
   text-decoration: none;
 }
 
-#songHolderHome{
+#songNameHome{
   opacity: 1;
   transition: opacity 5s ease-out;
-}
-
-#songNameHome{
   padding: none;
   font-size: 40px;
 }
