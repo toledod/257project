@@ -75,7 +75,7 @@ def day(month, day):
     songDay = topSong[6]
     
     
-    return render_template("day2.html", songName = songName, songArtist = songArtist, songDay = songDay, , dayNum = day, monthNum = month)
+    return render_template("day2.html", songName = songName, songArtist = songArtist, songDay = songDay , dayNum = day, monthNum = month)
 
 @app.route('/surprise')
 def surprise():
