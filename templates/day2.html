@@ -49,8 +49,8 @@
         }
 
       function goBack() {
-        month = "{{monthNum}}";
-        day = "{{dayNum}}";
+        month = parseInt("{{monthNum}}");
+        day = parseInt("{{dayNum}}");
         if(day == 1){
           if(month == 1){
             month = 4;
@@ -74,8 +74,8 @@
        window.location.href = `/day/${month}/${day}`;
       }
       function goForward() {
-        month = "{{monthNum}}";
-        day = "{{dayNum}}";
+        month = parseInt("{{monthNum}}");
+        day = parseInt("{{dayNum}}");
         if((day == 29) || (day == 30) || (day == 31)){
           if(month == 4){
             month = 1;
