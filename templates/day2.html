@@ -22,9 +22,24 @@
   </div>
 </div>
 
+<!-- testing with inputdate  -->
+<div id=pickMonthDay2>
+   <form id = "dateForm" onsubmit = "setAction2()">
+    <label> Choose a Date:</label>
+        <input 
+          type="date" 
+          id = "dateInput"
+          min="2024-01-01"
+          max="2024-04-30">
+    <button type="submit"> Submit </button>
+   </form>  
+</div>
+
+
+
+      
 
 <div id = "pickMonthDay">
-  <input type="date">
   <form id = "dateForm" onsubmit = "setAction()">
     <label> Choose a Month:</label>
         <select id="month" name="month" onchange="updateDays()">
@@ -60,6 +75,16 @@
         form = document.getElementById('dateForm');
         form.action = `/day/${month}/${day}`;
       }
+      function setAction2() {
+            dateFromForm = getElementById('dateInput').value;
+            date = new Date(dateFromForm);
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            form = document.getElementById('dateForm');
+            form.action = `/day/${month}/${day}`;
+          }
+
+  
       function saveSelection() {
         month = document.getElementById('month').value;
         day = document.getElementById('days').value;
