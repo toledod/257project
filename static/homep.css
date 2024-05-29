@@ -115,6 +115,15 @@
   margin-top: 20px;
 }
 
+.navDayButton{
+  color: black;
+  background-color: none;
+  font-size: 20px;
+}
+
+
+
+
 input[type="date"] {
     appearance: none;
     -webkit-appearance: none;
@@ -151,6 +160,8 @@ input[type="date"]::before {
     justify-content: center;
     align-items: center;
 }
+
+
 
 @keyframes smallz{
     from{
