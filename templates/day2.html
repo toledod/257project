@@ -34,9 +34,6 @@
     <button type="submit"> Submit </button>
    </form>  
 </div>
-
-
-
       
 
 <div id = "pickMonthDay">
@@ -75,34 +72,18 @@
         form = document.getElementById('dateForm');
         form.action = `/day/${month}/${day}`;
       }
-      function setAction2() {
-            dateFromForm = getElementById('dateInput').value;
-            date = new Date(dateFromForm);
-            month = date.getMonth() + 1;
-            day = date.getDate();
-            form = document.getElementById('dateForm2');
-            console.log(month);
-            console.log(day);
-            form.action = `/day/${month}/${day}`;
-          }
-
-  
-      function saveSelection() {
-        month = document.getElementById('month').value;
-        day = document.getElementById('days').value;
-        localStorage.setItem('selectedMonth', month);
-        localStorage.setItem('selectedDay', day);
-      }
-   
-    
-      document.addEventListener('DOMContentLoaded', () => {
-    // Retrieve the saved month and day from local storage
-    const savedMonth = localStorage.getItem('selectedMonth');
-    if (savedMonth) {
-      document.getElementById('month').value = savedMonth;
-      updateDays();  // Call updateDays to set the correct number of days
-    } else {
-      updateDays();  // Initialize days if no saved month
+      function setAction2(event) {
+        event.preventDefault();  // Prevent form submission
+        const dateFromForm = document.getElementById('dateInput').value;
+        const date = new Date(dateFromForm);
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        const form = document.getElementById('dateForm2');
+        console.log(month);
+        console.log(day);
+        form.action = `/day/${month}/${day}`;
+        form.submit();
     }
-  });
+
+   );
   </script>
