@@ -104,6 +104,16 @@
   opacity: 0;
 }
 
+.dayDisplay{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pickMonthDay{
+  text-align: center;
+  margin-top: 20px;
+}
+
 @keyframes smallz{
     from{
         transform: scale(100%);
