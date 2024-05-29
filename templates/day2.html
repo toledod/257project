@@ -24,61 +24,23 @@
 
 <!-- testing with inputdate  -->
 <div id=pickMonthDay2>
-   <form id = "dateForm2" onsubmit = setAction2()>
+   <form id = "dateForm2">
     <label> Choose a Date:</label>
         <input 
           type="date" 
           id = "dateInput"
           min="2024-01-01"
           max="2024-04-30"
-          onchange = setAction2()>
-    <button type="submit"> Submit </button>
+          onchange = changeDate()>
    </form>  
 </div>
-      
-<!--
-<div id = "pickMonthDay">
-  <form id = "dateForm" onsubmit = "setAction()">
-    <label> Choose a Month:</label>
-        <select id="month" name="month" onchange="updateDays()">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-      </select>
-    <br>
-    <label> Choose a Day:</label>
-        <select id="days" name="days" onchange="updateSong()">
-        </select>
-    <button type="submit"> Submit </button>
-   </form>
-</div>
-    -->
-<script>
-      function updateDays() {
-          month = document.getElementById('month').value; 
-          daysSelect = document.getElementById('days');
-          daysInMonth = new Date(2024, month, 0).getDate();
 
-          let options = '';
-          for (let day = 1; day <= daysInMonth; day++) {
-              options += `<option value="${day}">${day}</option>`;
-          }
-          daysSelect.innerHTML = options;
-      }
-      document.addEventListener('DOMContentLoaded', updateDays);
-   
-      function setAction() {
-        month = document.getElementById('month').value;
-        day = document.getElementById('days').value;
-        form = document.getElementById('dateForm');
-        form.action = `/day/${month}/${day}`;
-      }
-      function setAction2() {
+<script>
+      function changeDate() {
         const dateFromForm = document.getElementById('dateInput').value;
         const date = new Date(dateFromForm);
         const month = date.getMonth() + 1;
-        const day = date.getDate();
+        const day = date.getDate() + 1;
         const form = document.getElementById('dateForm2');
         console.log(month);
         console.log(day);
