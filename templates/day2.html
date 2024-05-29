@@ -24,7 +24,7 @@
 
 <!-- testing with inputdate  -->
 <div id=pickMonthDay2>
-   <form id = "dateForm2" onsubmit = "setAction2()">
+   <form id = "dateForm2" onsubmit = setAction2()>
     <label> Choose a Date:</label>
         <input 
           type="date" 
@@ -73,7 +73,7 @@
         form = document.getElementById('dateForm');
         form.action = `/day/${month}/${day}`;
       }
-      function setAction2(event) {
+      function setAction2() {
         const dateFromForm = document.getElementById('dateInput').value;
         const date = new Date(dateFromForm);
         const month = date.getMonth() + 1;
