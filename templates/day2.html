@@ -17,8 +17,13 @@
     {{monthNum}} - {{dayNum}} - 2024
     <button class = "navDayButton" onclick = goForward()> next ► </button>
   </div>
+  
   <div>
-    {{songArtist }}- {{songName}}
+    {% if valid == 1 %}
+        <p>{{songArtist }}- {{songName}}</p>
+    {% else %}
+        <p>Data Not Found</p>
+    {% endif %}
   </div>
 </div>
 
