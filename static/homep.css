@@ -143,7 +143,7 @@
   font-size: 20px;
 }
 
-.pickMonthDay2{
+#pickMonthDay2{
   display: flex;
   flex: 1 1 0;
   align-items: center; 
