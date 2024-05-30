@@ -43,15 +43,13 @@
       function changeDate() {
         const dateFromForm = document.getElementById('dateInput').value;
         const date = new Date(dateFromForm);
-        const month = date.getMonth();
-        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const day = date.getDate() + 1;
         const form = document.getElementById('dateForm2');
         console.log(month);
         console.log(day);
         form.action = `/day/${month + 1}/${day + 1}`;
         form.submit();
-       
-        
       }
         
     function goBack() {
