@@ -46,11 +46,7 @@
         const month = date.getMonth() + 1;
         const day = date.getDate() + 1;
         const form = document.getElementById('dateForm2');
-        console.log(month);
-        console.log(day);
-        form.action = `/day/${month}/${day}`;
-        form.submit();
-        if (month == 12) {
+         if (month == 12) {
           if (day == 32) {
             month = 01;
             day = 1;
@@ -76,6 +72,11 @@
             day = 1;
             
         }
+        console.log(month);
+        console.log(day);
+        form.action = `/day/${month}/${day}`;
+        form.submit();
+       
         
       }
         
