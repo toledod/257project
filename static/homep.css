@@ -67,7 +67,8 @@
 
 .mainNav{
   display: flex;
-  margin: auto;
+  margin: 0px;
+  padding: 0px;
   background-color: #33d62d;
   justify-content: space-between;
   text-decoration: none;
