@@ -151,6 +151,7 @@ input[type="date"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     position: relative;
+    background: url('/static/pictures/calanderICON.png') no-repeat center;
     width: 2.5em;
     color: transparent;
     font-size: 16px;
@@ -169,7 +170,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
 }
 input[type="date"]::before {
-    content: '/static/pictures/calanderICON.png'; /* Unicode for a calendar icon */
+    content: ''; /* Unicode for a calendar icon */
     font-family: Arial, sans-serif;
     color: black;
     position: absolute;
