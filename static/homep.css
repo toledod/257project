@@ -169,7 +169,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
 }
 input[type="date"]::before {
-    content: '\1F4C5'; /* Unicode for a calendar icon */
+    content: '/static/pictures/calanderICON.png'; /* Unicode for a calendar icon */
     font-family: Arial, sans-serif;
     color: black;
     position: absolute;
