@@ -1,4 +1,4 @@
-e<!-- takes songName and songArtist  -->
+<!-- takes songName and songArtist  -->
 
 <head>
   <link rel="stylesheet" href="/static/homep.css">
@@ -48,6 +48,8 @@ e<!-- takes songName and songArtist  -->
         if (month == 12 && day == 32) {
           const month = 01;
           const day = 01;
+          form.action = `/day/${month}/${day}`;
+          form.submit();
         }
         const form = document.getElementById('dateForm2');
         console.log(month);
