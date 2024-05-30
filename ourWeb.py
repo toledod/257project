@@ -73,12 +73,14 @@ def day(month, day):
     if topSong == None:
         songName = "Data Not"
         songArtist = "Found"
+        valid = 0
     else:
         songName = topSong[0]
         songArtist = topSong[1]
+        valid = 1
     
     
-    return render_template("day2.html", songName = songName, songArtist = songArtist, dayNum = day, monthNum = month)
+    return render_template("day2.html", songName = songName, songArtist = songArtist, dayNum = day, monthNum = month, valid = valid)
 
 @app.route('/surprise')
 def surprise():
