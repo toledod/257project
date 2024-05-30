@@ -41,15 +41,41 @@
 
 <script>
       function changeDate() {
-        dateFromForm = document.getElementById('dateInput').value;
-        date = new Date(dateFromForm);
-        month = date.getMonth() + 1;
-        day = date.getDate() + 1;
-        form = document.getElementById('dateForm2');
+        const dateFromForm = document.getElementById('dateInput').value;
+        const date = new Date(dateFromForm);
+        const month = date.getMonth() + 1;
+        const day = date.getDate() + 1;
+        const form = document.getElementById('dateForm2');
         console.log(month);
         console.log(day);
         form.action = `/day/${month}/${day}`;
         form.submit();
+        if (month == 12) {
+          if (day == 32) {
+            month = 1;
+            day = 1;
+            window.location.href = `/day/${month}/${day}`;
+          }
+        }
+        if (month == 1) {
+          if (day == 32) {
+            month = 2;
+            day = 1;
+            
+          }
+        }
+        if (month == 2) {
+          if (day == 30) {
+            month += 1;
+            day = 1;
+            
+          }
+        }
+        if (month == 3 && day == 32) {
+            month += 1;
+            day = 1;
+            
+        }
         
       }
         
