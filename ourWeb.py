@@ -58,6 +58,36 @@ def month(month):
 
 @app.route('/day/<month>/<day>')
 def day(month, day):
+     if (month == 12) {
+          if (day == 32) {
+            month = 1;
+            day = 1;
+            form.action = `/day/${month}/${day}`;
+            form.submit();
+          }
+        }
+        if (month == 1) {
+          if (day == 32) {
+            month = 2;
+            day = 1;
+            form.action = `/day/${month}/${day}`;
+            form.submit();
+          }
+        }
+        if (month == 2) {
+          if (day == 30) {
+            month += 1;
+            day = 1;
+            form.action = `/day/${month}/${day}`;
+            form.submit();
+          }
+        }
+        if (month == 3 && day == 32) {
+            month += 1;
+            day = 1;
+            form.action = `/day/${month}/${day}`;
+            form.submit();
+        }
     conn = psycopg2.connect(
         host="localhost",
         port=5432,   
