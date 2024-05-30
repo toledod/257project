@@ -63,10 +63,11 @@
 .songHolderHome{
   text-align: center;
   margin: 100px;
+  font-family: Helvetica;
 }
 
 .mainNav{
-/*   display: flex; */
+  display: flex;
   margin: 0px;
   padding: 0px;
   background-color: #33d62d;
@@ -78,8 +79,6 @@
 .homeNav{
   color: black;
   text-decoration: none;
-  margin: 0px;
-  padding: 0px;
 }
 .homeNav:visited{
   color: black;
