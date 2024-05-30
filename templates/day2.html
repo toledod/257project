@@ -51,15 +51,15 @@
               let month = parseInt("{{ monthNum }}");
               let day = parseInt("{{ dayNum }}");
   
-              if (day === 1) {
-                  if (month === 1) {
+              if (day == 1) {
+                  if (month == 1) {
                       month = 4;
                       day = 30;
                   } else {
                       month -= 1;
-                      if (month === 2) {
+                      if (month == 2) {
                           day = 29;
-                      } else if (month === 1) {
+                      } else if (month == 1) {
                           day = 30;
                       } else {
                           day = 31;
@@ -76,11 +76,11 @@
             let month = parseInt("{{ monthNum }}");
             let day = parseInt("{{ dayNum }}");
 
-            if ((month === 2 && day === 29) || 
-                (month === 3 && day === 31) || 
-                (month === 1 && day === 30) || 
-                (month === 4 && day === 30)) {
-                if (month === 4) {
+            if ((month == 2 && day == 29) || 
+                (month == 3 && day == 31) || 
+                (month == 1 && day == 30) || 
+                (month == 4 && day == 30)) {
+                if (month == 4) {
                     month = 1;
                     day = 1;
                 } else {
