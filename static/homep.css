@@ -143,6 +143,10 @@
   font-size: 20px;
 }
 
+.pickMonthDay2{
+  position: center;
+}
+
 
 
 input[type="date"] {
