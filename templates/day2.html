@@ -48,7 +48,11 @@
         const form = document.getElementById('dateForm2');
         console.log(month);
         console.log(day);
-        form.action = `/day/${month + 1}/${day + 1}`;
+        if (month == 12) {
+          month = 1
+          day = 1
+        }
+        form.action = `/day/${month}/${day}`;
         form.submit();
       }
         
