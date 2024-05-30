@@ -64,19 +64,17 @@
         }
         if (month == 2) {
           if (day == 30) {
-            month = 3;
+            month += 1;
             day = 1;
             form.action = `/day/${month}/${day}`;
             form.submit();
           }
         }
-        if (month == 3) {
-          if (day == 32) {
-            month = 4;
+        if (month == 3 && day == 32) {
+            month += 1;
             day = 1;
             form.action = `/day/${month}/${day}`;
             form.submit();
-          }
         }
         console.log(month);
         console.log(day);
