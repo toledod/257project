@@ -48,10 +48,11 @@
         const form = document.getElementById('dateForm2');
         console.log(month);
         console.log(day);
-        if (month == 12) {
-          const month = 01
-          const day = 01
+        if (month > 4) {
+          month = 1;
+          day = 1;
         }
+        
         form.action = `/day/${month}/${day}`;
         form.submit();
       }
