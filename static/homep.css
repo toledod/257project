@@ -19,11 +19,12 @@
   justify-content: center;
   padding: 5px;
   margin: 50px;
-  font-size: 6vw;
+  font-size: 5vw;
   border-radius: 20px;
   transition-duration: 0.4s;
   cursor: pointer;
   font-family: Helvetica;
+  border: 0px;
 }
 .big-button:hover{
   color: #489018;
