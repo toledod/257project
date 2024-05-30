@@ -26,7 +26,7 @@
   font-family: Helvetica;
 }
 .big-button:hover{
-  color: #D0FFAF;
+  color: #EDFFE1;
   background-color: #D1FFBD;
   border: 2px solid #04AA6D;
   transition-duration: 0.3s;
@@ -46,19 +46,6 @@
   position: center;
   text-align: center;
   font-family: Helvetica;
-}
-.left-button{
-  display: flex;
-  flex: 1;
-  text-align: left;
-  font-size: large;
-}
-
-.right-button{
-  display: flex;
-  flex: 1;
-  text-align: right;
-  font-size: large;
 }
 
 .songHolderHome{
