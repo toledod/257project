@@ -61,6 +61,7 @@ def day(month, day):
     if month == 12 and day == 32:
         month = 1
         day = 1
+        day(month, day)
     
     conn = psycopg2.connect(
         host="localhost",
