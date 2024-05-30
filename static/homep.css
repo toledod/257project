@@ -23,6 +23,7 @@
   border-radius: 20px;
   transition-duration: 0.4s;
   cursor: pointer;
+  font-family: Helvetica;
 }
 .big-button:hover{
   background-color: #D1FFBD;
@@ -43,6 +44,7 @@
   flex: 1 1 0;
   position: center;
   text-align: center;
+  font-family: Helvetica;
 }
 .left-button{
   display: flex;
@@ -70,6 +72,7 @@
   justify-content: space-between;
   text-decoration: none;
   font-size: 30px;
+  font-family: Helvetica;
 }
 .homeNav{
   color: black;
