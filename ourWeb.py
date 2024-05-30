@@ -84,6 +84,7 @@ def day(month, day):
 
 @app.route('/surprise')
 def surprise():
+    # TO DO: impliment valid bit to tell html if results were empty or not
     conn = psycopg2.connect(
         host="localhost",
         port=5432,   
@@ -99,12 +100,14 @@ def surprise():
         cur.execute(sql)
         result = cur.fetchmany(30)
         val = random.randint(0, 29)
+        print(result[val][8])
 
     else:
         sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 ORDER BY energy DESC"
         cur.execute(sql)
         result = cur.fetchmany(30)
         val = random.randint(0, 29)
+        print(result[val][8])
 
     return render_template("surprise.html", someTitle = result[val][0], someArtist = result[val][1], someRank = result[val][2], 
                           explict = result[val][8], popScore = result[val][7] )
