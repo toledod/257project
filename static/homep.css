@@ -26,6 +26,7 @@
   font-family: Helvetica;
 }
 .big-button:hover{
+  color: #D0FFAF;
   background-color: #D1FFBD;
   border: 2px solid #04AA6D;
   transition-duration: 0.3s;
