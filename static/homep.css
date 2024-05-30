@@ -144,8 +144,9 @@
 }
 
 .pickMonthDay2{
-  position: center;
-  justify-content: center;
+  display: flex;
+  flex: 1 1 0;
+  align-items: center; 
 }
 
 
