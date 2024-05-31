@@ -21,7 +21,7 @@
   padding: 5px;
   margin: 50px;
   font-size: 2vw;
-  width: 30px;
+  width: 50px;
   border-radius: 10px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -33,7 +33,6 @@
   background-color: #D1FFBD;
   transition-duration: 0.3s;
   animation: smallz 850ms linear infinite alternate;
-  width: 70px;
 }
 .linkInButton{
   display: flex;
