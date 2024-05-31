@@ -13,16 +13,6 @@
 }
 
 
-.my-class{
-  text-align: center;
-  color: blue;
-}
-
-.center-para{
-  text-align: center;
-  margin-top: 20px;
-}
-
 .big-button{
   display: flex;
   flex: 1 1 0;
@@ -31,6 +21,7 @@
   padding: 5px;
   margin: 50px;
   font-size: 2vw;
+  width: 30px;
   border-radius: 10px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -42,6 +33,7 @@
   background-color: #D1FFBD;
   transition-duration: 0.3s;
   animation: smallz 850ms linear infinite alternate;
+  width: 70px;
 }
 .linkInButton{
   display: flex;
@@ -76,6 +68,7 @@
   font-family: Helvetica;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  height: 30px;
 }
 .homeNav{
   color: black;
@@ -85,6 +78,7 @@
   color: black;
   text-decoration: none;
 }
+
 .homeNav:hover{
   color: white;
   text-decoration: none;
