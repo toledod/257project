@@ -54,6 +54,22 @@
   text-align: center;
   margin: 100px;
   font-family: Helvetica;
+  position: absolute;
+  
+}
+
+#songNameHome{
+  padding: 0;
+  font-size: 60px;
+  opacity: 1;
+  transition: opacity 5s ease-out;
+}
+
+#songArtistHome{
+  padding: 0;
+  font-size: 20px;
+  opacity: 1;
+  transition: opacity 5s ease-out;
 }
 
 .mainNav{
@@ -63,7 +79,7 @@
   background-color: #33d62d;
   justify-content: space-between;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
   font-family: Helvetica;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -118,12 +134,6 @@
   text-decoration: none;
 }
 
-#songNameHome{
-  padding: 0;
-  font-size: 40px;
-  opacity: 1;
-  transition: opacity 5s ease-out;
-}
 .fade-out{
   opacity: 0;
 }
