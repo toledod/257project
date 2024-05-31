@@ -2,6 +2,17 @@
 .div{
   font-family: Helvetica;
 }
+
+.BOD{
+  font-family: Helvetica;
+  background-color: #6D7568;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+
 .my-class{
   text-align: center;
   color: blue;
