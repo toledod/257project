@@ -52,21 +52,23 @@
 
 .songHolderHome{
   text-align: left;
-  margin: 50px;
+  margin: 30px;
   font-family: Helvetica;
   
 }
 
 #songNameHome{
   padding: 0;
-  font-size: 60px;
+  margin: 0px;
+  font-size: 80px;
   opacity: 1;
   transition: opacity 5s ease-out;
 }
 
 #songArtistHome{
   padding: 0;
-  font-size: 20px;
+  margin: 0px;
+  font-size: 30px;
   opacity: 1;
   transition: opacity 5s ease-out;
 }
