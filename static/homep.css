@@ -13,7 +13,6 @@
 
 .big-button{
   display: flex;
-  flex: 1 1 0;
   align-items: center; 
   text-align: end;
   padding: 5px;
