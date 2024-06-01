@@ -37,7 +37,7 @@
 .linkInButton{
   display: flex;
   flex: 1 1 0;
-  position: center;
+/*   position: center; */
   text-align: end;
   text-decoration: none;
 }
