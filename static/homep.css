@@ -178,6 +178,11 @@
   border-collapse: collapse;
 }
 
+#headerRow{
+  font-size: 20px;
+  border-bottom: 2px solid black;
+}
+
 
 input[type="date"] {
     appearance: none;
