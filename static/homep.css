@@ -32,7 +32,6 @@
   color: #489018;
   background-color: #D1FFBD;
   border: 4px black;
-  border-size: 2px;
   transition-duration: 0.3s;
   animation: smallz 850ms linear infinite alternate;
   
