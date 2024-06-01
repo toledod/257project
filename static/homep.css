@@ -45,7 +45,8 @@
 
 .buttonHolder{
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  width: auto;
   align-items: flex-end;
   text-align: center;
   font-family: Helvetica;
