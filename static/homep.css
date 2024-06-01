@@ -12,7 +12,6 @@
   
 }
 
-
 .big-button{
   display: flex;
   flex: 1 1 0;
@@ -84,9 +83,8 @@
   background-color: #B5FAB3;
   justify-content: space-between;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
   font-family: Helvetica;
-  height: 30px;
 }
 .homeNav{
   color: black;
@@ -96,6 +94,7 @@
 .homeNav:visited{
   color: black;
   text-decoration: none;
+  
 }
 
 .homeNav:hover{
