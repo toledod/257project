@@ -54,6 +54,7 @@
   text-align: left;
   margin: 30px;
   font-family: Helvetica;
+  color: black;
   
 }
 
@@ -75,6 +76,7 @@
 
 .mainNav{
   display: flex;
+  width: 50px;
   margin: 0px;
   padding: 0px;
   background-color: #33d62d;
@@ -82,8 +84,6 @@
   text-decoration: none;
   font-size: 20px;
   font-family: Helvetica;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   height: 30px;
 }
 .homeNav{
