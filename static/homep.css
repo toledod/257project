@@ -26,12 +26,12 @@
   transition-duration: 0.4s;
   cursor: pointer;
   font-family: Helvetica;
-  border: 4px;
+  border: 4px solid transparent;
 }
 .big-button:hover{
   color: #489018;
   background-color: #D1FFBD;
-  border: 4px black;
+  order: 4px solid black; 
   transition-duration: 0.3s;
   animation: smallz 850ms linear infinite alternate;
   
