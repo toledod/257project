@@ -39,7 +39,7 @@
   display: flex;
   flex: 1 1 0;
   position: center;
-  text-align: center;
+  text-align: end;
   text-decoration: none;
 }
 
