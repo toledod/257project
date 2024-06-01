@@ -90,7 +90,7 @@
 }
 .homeNav{
   color: black;
-  padding: 30px;
+  padding: 5px;
   text-decoration: none;
 }
 .homeNav:visited{
@@ -127,7 +127,7 @@
 
 .aboutNav{
   color: black;
-  padding: 30px;
+  padding: 5px;
   text-decoration: none;
 }
 .aboutNav:visited{
