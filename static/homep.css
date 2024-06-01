@@ -1,4 +1,4 @@
-.div{
+#.div{
   font-family: Helvetica;
 }
 
@@ -171,6 +171,11 @@
   justify-content: center;
 }
 
+#tablemonth{
+  color: black;
+  border: 1px solid black;
+  
+}
 
 
 input[type="date"] {
