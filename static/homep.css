@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: column;
   align-items: end;
-  text-align: center;
+  text-align: end;
   font-family: Helvetica;
   padding: 80px;
 }
