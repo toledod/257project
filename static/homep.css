@@ -21,7 +21,7 @@
   margin: 50px;
   font-size: 6vw;
   width: 50px;
-  background-color: rgba(255, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 10px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -30,8 +30,8 @@
 }
 .big-button:hover{
   color: #489018;
-  background-color: #D1FFBD;
-  border: 2px solid #9FE275; 
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid transparent; 
   transition-duration: 0.3s;
   animation: smallz 850ms linear infinite alternate;
   
