@@ -1,24 +1,21 @@
-
-.div{
+.div {
   font-family: Helvetica;
 }
 
-.BOD{
+.BOD {
   font-family: Helvetica;
   background-color: #E6FFD7;
   color: white;
-  margin: 0px;
-  padding: 0px;
-  
+  margin: 0;
+  padding: 0;
 }
 
-.big-button{
+.big-button {
   display: flex;
-  flex: 1 1 0;
   align-items: center; 
   justify-content: center;
   padding: 5px;
-  margin: 50px;
+  margin: 10px;
   font-size: 6vw;
   width: 50px;
   background-color: rgba(0, 0, 0, 0);
@@ -28,101 +25,84 @@
   font-family: Helvetica;
   border: 2px solid transparent;
 }
-.big-button:hover{
+.big-button:hover {
   color: #489018;
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid transparent; 
   transition-duration: 0.3s;
   animation: smallz 850ms linear infinite alternate;
-  
 }
-.linkInButton{
+
+.linkInButton {
   display: flex;
-  flex: 1 1 0;
-  position: center;
+  flex: 1;
+  justify-content: center;
   text-align: center;
   text-decoration: none;
 }
 
-.buttonHolder{
+.buttonHolder {
   display: flex;
   flex-direction: column; 
   align-items: flex-end;
-  text-align: center;
-  font-family: Helvetica;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
-.songHolderHome{
+.songHolderHome {
   text-align: left;
   margin: 30px;
   font-family: Helvetica;
   color: black;
 }
 
-#songNameHome{
+#songNameHome {
   padding: 0;
-  margin: 0px;
+  margin: 0;
   font-size: 7vw;
   opacity: 1;
   transition: opacity 5s ease-out;
 }
 
-#songArtistHome{
+#songArtistHome {
   padding: 0;
-  margin: 0px;
+  margin: 0;
   font-size: 3vw;
   opacity: 1;
   transition: opacity 5s ease-out;
 }
 
-.mainNav{
+.mainNav {
   display: flex;
   height: 70px;
-  margin: 0px;
-  padding: 0px;
-  width: auto;
+  width: 100%;
   background-color: #B5FAB3;
   justify-content: space-between;
-  text-decoration: none;
+  align-items: center;
   font-size: 45px;
   font-family: Helvetica;
+  box-sizing: border-box;
 }
-.homeNav{
+
+.homeNav, .aboutNav {
   color: black;
   padding: 5px;
   text-decoration: none;
 }
-.homeNav:visited{
+.homeNav:visited, .aboutNav:visited {
   color: black;
   text-decoration: none;
-  
 }
-
-.homeNav:hover{
+.homeNav:hover, .aboutNav:hover {
   color: white;
   text-decoration: none;
 }
 
-.aboutNav{
-  color: black;
-  padding: 5px;
-  text-decoration: none;
-}
-.aboutNav:visited{
-  color: black;
-  text-decoration: none;
-}
-.aboutNav:hover{
-  color: white;
-  text-decoration: none;
-}
-
-.fade-out{
+.fade-out {
   opacity: 0;
 }
 
-
-.monthPick{
+.monthPick {
   display: flex;
   margin: auto;
   background-color: #B7FE84;
@@ -131,93 +111,87 @@
   font-size: 30px;
 }
 
-.monthsForBar{
+.monthsForBar {
   color: black;
   text-decoration: none;
 }
-.monthsForBar:visited{
+.monthsForBar:visited {
   color: black;
   text-decoration: none;
 }
-.monthsForBar:hover{
+.monthsForBar:hover {
   color: white;
   text-decoration: none;
 }
 
-
-
-.dayDisplay{
+.dayDisplay {
   padding: 20px;
   text-align: center;
   margin-top: 20px;
   font-size: 40px;
 }
 
-.pickMonthDay{
+.pickMonthDay {
   text-align: center;
   margin-top: 20px;
 }
 
-.navDayButton{
+.navDayButton {
   color: black;
   background-color: none;
   font-size: 20px;
 }
 
-#pickMonthDay2{
+#pickMonthDay2 {
   display: flex;
-  flex: 1 1 0;
   align-items: center;
   justify-content: center;
 }
 
-
-
 input[type="date"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    position: relative;
-    width: 2.5em; /* Adjust width as needed */
-    height: 2.5em; /* Adjust height as needed */
-    color: transparent;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    background: url('/static/pictures/calanderICON.png') no-repeat center;
-    background-size: contain;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  color: transparent;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background: url('/static/pictures/calanderICON.png') no-repeat center;
+  background-size: contain;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: transparent;
-    background: none;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: none;
+  cursor: pointer;
 }
 
 input[type="date"]::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-@keyframes smallz{
-    from{
-        transform: scale(100%);
-    }
-    to{
-        transform: scale(99%);
-    }
+@keyframes smallz {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(99%);
+  }
 }
