@@ -178,10 +178,10 @@
   border-collapse: collapse;
 }
 
-#headerRow{
-  font-size: 20px;
-  border-bottom: 2px solid black;
-}
+th, td {
+      padding: 8px;
+      text-align: left;
+    }
 
 
 input[type="date"] {
