@@ -37,7 +37,7 @@
         tableDisplay = document.getElementById('tablemonth');
         tableSql = {{ tablefetch|tojson }};
     
-        let options = '<tr id = "headerRow"><td>Title</td><td>Artist</td><td>Date</td><td>Popularity</td></tr>';
+        let options = '<th id = "headerRow"><td>Title</td><td>Artist</td><td>Date</td><td>Popularity</td></th>';
         let songInTable = [];
         let dateInTable = [];
         for (let row = 0; row < 300; row++) {
