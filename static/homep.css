@@ -62,7 +62,7 @@
 #songNameHome{
   padding: 0;
   margin: 0px;
-  font-size: 80px;
+  font-size: 8vw;
   opacity: 1;
   transition: opacity 5s ease-out;
 }
@@ -70,7 +70,7 @@
 #songArtistHome{
   padding: 0;
   margin: 0px;
-  font-size: 30px;
+  font-size: 6vw;
   opacity: 1;
   transition: opacity 5s ease-out;
 }
@@ -83,7 +83,7 @@
   background-color: #B5FAB3;
   justify-content: space-between;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 45px;
   font-family: Helvetica;
 }
 .homeNav{
