@@ -32,7 +32,7 @@ def pickSongForHome():
         result = cur.fetchmany(20)
         val = random.randint(0, 19)
 
-    return render_template("homepage.html", someTitle = result[val][0], someArtist = result[val][1], someDate = result[val][6])
+    return render_template("homepage.html", someTitle = result[val][0], someArtist = result[val][1])
 
 @app.route('/month/<month>')
 def month(month):
