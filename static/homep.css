@@ -31,7 +31,7 @@
 .big-button:hover{
   color: #489018;
   background-color: #D1FFBD;
-  border: 4px #A9EC7F
+  border: 4px #A9EC7F;
   border-size: 2px;
   transition-duration: 0.3s;
   animation: smallz 850ms linear infinite alternate;
