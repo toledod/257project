@@ -18,7 +18,8 @@
       {{monthNum}} - {{dayNum}} - 2024
       <button class = "navDayButton" onclick = goForward()> ► </button>
     </div>
-  
+
+<!-- checks for a 1 or 0 as a return for valid so that we can print either a somg or not found as the result -->
   <div>
     {% if valid == 1 %}
         <p>{{songArtist }}- {{songName}}</p>
@@ -41,14 +42,19 @@
 </div>
 </body>
 <script>
+  
+  /* changes the date on the input for the "day" page */ 
       function changeDate() {
         dateFromForm = document.getElementById('dateInput').value;
         date = new Date(dateFromForm);
+        /* offset because the list is set at 0-11 */
         month = date.getMonth() + 1;
         day = date.getDate() + 1;
         form = document.getElementById('dateForm2');
         console.log(month);
         console.log(day);
+        
+        /* error handling for the offset of days */
         if (month == 1 && day == 32) {
           month = 2;
           day = 1;
@@ -72,7 +78,8 @@
     function goBack() {
               let month = parseInt("{{ monthNum }}");
               let day = parseInt("{{ dayNum }}");
-  
+
+      /* going from the beginning of our data list to the end and if not move back */
               if (day == 1) {
                   if (month == 1) {
                       month = 4;
@@ -97,7 +104,10 @@
       function goForward() {
             let month = parseInt("{{ monthNum }}");
             let day = parseInt("{{ dayNum }}");
-
+        
+        /* going from the end of every monthto next in the
+        list to the end and if not check if at the end of our
+        data then if not move forward */
             if ((month == 2 && day == 29) || 
                 (month == 3 && day == 31) || 
                 (month == 1 && day == 30) || 
