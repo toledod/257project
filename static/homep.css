@@ -63,16 +63,16 @@
   padding: 0;
   margin: 0px;
   font-size: 7vw;
-  opacity: 1;
-  transition: opacity 5s ease-out;
+/*   opacity: 1;
+  transition: opacity 5s ease-out; */
 }
 
 #songArtistHome{
   padding: 0;
   margin: 0px;
   font-size: 3vw;
-  opacity: 1;
-  transition: opacity 5s ease-out;
+/*   opacity: 1;
+  transition: opacity 5s ease-out; */
 }
 
 .mainNav{
