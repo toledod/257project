@@ -1,2 +1,4 @@
 # 257project
-this one for the project
+# David Toledo / Julian Tanguma
+
+Run ourWeb.py to view website
