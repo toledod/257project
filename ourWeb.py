@@ -4,9 +4,12 @@ import random
 import psycopg2
 
 app = Flask(__name__)
-
+#starting webpage
 @app.route('/')
 def pickSongForHome():
+    #function gets song to display
+    #on homepage from a big fetch list
+    #to keep a variety of songs
     conn = psycopg2.connect(
         host="localhost",
         port=5432,   
@@ -36,6 +39,8 @@ def pickSongForHome():
 
 @app.route('/month/<month>')
 def month(month):
+    #month makes a request to sql with information
+    #about the month picked
     conn = psycopg2.connect(
         host="localhost",
         port=5432,   
@@ -71,6 +76,9 @@ def day(month, day):
     cur.execute(sql, [day, month])
     
     topSong = cur.fetchone()
+    #checking to make sure our fetch
+    #got something, and using valid to
+    #tell our html file if it has something to display
     if topSong == None:
         songName = "Data Not"
         songArtist = "Found"
@@ -85,7 +93,8 @@ def day(month, day):
 
 @app.route('/surprise')
 def surprise():
-    # TO DO: impliment valid bit to tell html if results were empty or not
+    #similar to the main menu, surprise
+    #finds a random song and displays it.
     conn = psycopg2.connect(
         host="localhost",
         port=5432,   
@@ -108,6 +117,7 @@ def surprise():
         result = cur.fetchmany(30)
         val = random.randint(0, 29)
 
+    #if fetch comes back empty, run surprise again (rarely will happen)
     if(result == None):
         surprise()
     else:
