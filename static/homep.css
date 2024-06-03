@@ -290,9 +290,9 @@ input[type="date"]::-webkit-datetime-edit-year-field
 }
 .jokeHold{
   display: flex;
-  font-size: 80px;
+  font-size: 50px;
 }
-.jokeHold{
+.jokeHold:hover{
   animation: small2 450ms linear infinite alternate;
 }
 
