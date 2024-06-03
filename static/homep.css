@@ -188,6 +188,7 @@
   padding: 30px
 }
 
+/* MONTH STUFF */
 
 #tablemonth{
   font-family: Helvetica;
@@ -209,7 +210,7 @@
 td{
   word-wrap: break-word;
   padding: 10px;
-  max-width: 200px;
+  max-width: 240px;
 }
 
 input[type="date"] {
