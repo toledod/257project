@@ -289,17 +289,18 @@ input[type="date"]::-webkit-datetime-edit-year-field
   font-size: 30px;
 }
 .jokeHold{
-  display: flex;
+  display: in-line;
   font-size: 80px;
 }
 .jokeHold .joke {
   visibility: hidden;
-  transition: visibility 1s;
+  font-size: 1px;
+  transition: visibility 1s font-size: 0.3s;
 }
 
 .jokeHold:hover .joke {
   visibility: visible;
-  font-size: 60px;
+  font-size: 90px;
 }
 
 @keyframes smallz{
