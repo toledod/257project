@@ -256,9 +256,13 @@ input[type="date"]::-webkit-datetime-edit-year-field
     color: transparent;
 }
 
-#aboutHolder1{
+#aboutHolder{
   display: flex;
   text-align: flex-end;
+}
+.textContent{
+  display: flex;
+  flex-direction: column;
 }
 .nameAboutUs{
   font-size: 100px;
