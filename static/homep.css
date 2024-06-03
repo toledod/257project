@@ -295,7 +295,17 @@ input[type="date"]::-webkit-datetime-edit-year-field
 }
 
 #buttonSur{
+  display: flex;
+  justify-content: center;
   font-size: 30px;
+}
+
+.songHolderSur{
+  text-align: center;
+  margin: 10px;
+  font-family: Helvetica;
+  color: black;
+  font-size: 40px
 }
 
 @keyframes smallz{
