@@ -264,6 +264,11 @@ input[type="date"]::-webkit-datetime-edit-year-field
   display: flex;
   flex-direction: column;
 }
+.textContent2{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
 .nameAboutUs{
   font-size: 100px;
 }
