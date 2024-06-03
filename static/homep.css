@@ -101,7 +101,7 @@
   color: black;
   padding: 5px;
   text-decoration: none;
-  transition-duration: 0.4s;
+  transition-duration: 1s;
 }
 .homeNav:visited{
   color: black;
@@ -111,13 +111,14 @@
 .homeNav:hover{
   color: white;
   text-decoration: none;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
 }
 
 .aboutNav{
   color: black;
   padding: 5px;
   text-decoration: none;
+  transition-duration: 1s;
 }
 .aboutNav:visited{
   color: black;
@@ -126,7 +127,7 @@
 .aboutNav:hover{
   color: white;
   text-decoration: none;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
 }
 
 
