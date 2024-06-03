@@ -290,10 +290,8 @@ input[type="date"]::-webkit-datetime-edit-year-field
 }
 .jokeHold{
   display: flex;
-  font-size: 50px;
-}
-.jokeHold:hover{
-  animation: small2 450ms linear infinite alternate;
+  justify-content: center;
+  font-size: 40px;
 }
 
 @keyframes smallz{
@@ -304,11 +302,4 @@ input[type="date"]::-webkit-datetime-edit-year-field
         transform: scale(99%);
     }
 }
-@keyframes smallz2{
-    from{
-        transform: scale(100%);
-    }
-    to{
-        transform: scale(90%);
-    }
-}
+
