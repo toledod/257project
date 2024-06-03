@@ -282,11 +282,11 @@ input[type="date"]::-webkit-datetime-edit-year-field
 .comment{
   font-size: 30px;
 }
-.joke{
+.comment .joke {
   visibility: hidden;
-  font-size: 30px;
+  font-size: 30px;/* Hide the joke initially */
 }
-.comment: hover .joke{
+.comment:hover .joke{
   visibility: visible;
   font-size: 30px;
 }
