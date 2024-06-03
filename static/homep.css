@@ -206,6 +206,10 @@
       border-bottom: 3px solid black;
     }
 
+td{
+  word-wrap: break-word;
+}
+
 input[type="date"] {
     appearance: none;
     -webkit-appearance: none;
