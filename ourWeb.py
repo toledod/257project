@@ -104,25 +104,39 @@ def surprise():
     
     cur = conn.cursor()
 
-    randomInteger = random.randint(1, 2)
+    randomInteger = random.randint(1, 4)
     if randomInteger == 1:
-        sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 ORDER BY dance DESC"
+        sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) = 1 ORDER BY dance DESC"
         cur.execute(sql)
         result = cur.fetchmany(30)
         val = random.randint(0, 29)
 
-    else:
-        sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 ORDER BY energy DESC"
+    else if randomInteger == 2:
+        sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) = 2 ORDER BY energy DESC"
         cur.execute(sql)
         result = cur.fetchmany(30)
         val = random.randint(0, 29)
+        
+    else if randomInteger == 3:
+        sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) = 3 ORDER BY energy DESC"
+        cur.execute(sql)
+        result = cur.fetchmany(30)
+        val = random.randint(0, 29)
+        
+    else:
+        sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 EXTRACT(MONTH FROM date) = 4 ORDER BY energy DESC"
+        cur.execute(sql)
+        result = cur.fetchmany(30)
+        val = random.randint(0, 29)
+
+    
 
     #if fetch comes back empty, run surprise again (rarely will happen)
     if(result == None):
         surprise()
     else:
          return render_template("surprise.html", someTitle = result[val][0], someArtist = result[val][1], someRank = result[val][2], 
-                          explict = result[val][8], popScore = result[val][7] )
+                          explict = result[val][8], popScore = result[val][7], someDate = result[val][6] )
 
 
 @app.route('/about')
