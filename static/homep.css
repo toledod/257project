@@ -263,11 +263,13 @@ input[type="date"]::-webkit-datetime-edit-year-field
 .textContent{
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 .textContent2{
   display: flex;
   flex-direction: column;
   text-align: right;
+  padding: 10px;
 }
 .nameAboutUs{
   font-size: 100px;
