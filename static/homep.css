@@ -248,6 +248,9 @@ input[type="date"]::before {
     align-items: center;
     color: transparent;
 }
+input[type="date"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: transparent;
+}
 
 
 @keyframes smallz{
