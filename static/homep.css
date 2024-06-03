@@ -258,7 +258,6 @@ input[type="date"]::-webkit-datetime-edit-year-field
 
 #aboutHolder{
   display: flex;
-  text-align: flex-end;
 }
 .textContent{
   display: flex;
