@@ -111,13 +111,13 @@ def surprise():
         result = cur.fetchmany(30)
         val = random.randint(0, 29)
 
-    else if randomInteger == 2:
+    elif randomInteger == 2:
         sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) = 2 ORDER BY energy DESC"
         cur.execute(sql)
         result = cur.fetchmany(30)
         val = random.randint(0, 29)
         
-    else if randomInteger == 3:
+    elif randomInteger == 3:
         sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) = 3 ORDER BY energy DESC"
         cur.execute(sql)
         result = cur.fetchmany(30)
