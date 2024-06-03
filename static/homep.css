@@ -276,18 +276,27 @@ input[type="date"]::-webkit-datetime-edit-year-field
   font-size: 100px;
 }
 
-.subText{
-  font-size: 30px;
-}
 .comment{
   font-size: 25px;
 }
 
 #picOfus{
   display: flex;
+  flex-direction: column;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 100vh; /* Adjust as needed */
+  font-size: 30px;
+}
+
+.jokeHold .joke {
+  visibility: hidden;
+  transition: visibility 0.2s, font-size 0.2s;
+}
+
+.jokeHold:hover .joke {
+  visibility: visible;
+  font-size: 30px;
 }
 
 @keyframes smallz{
