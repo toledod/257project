@@ -194,12 +194,12 @@
   color: black;
   border-collapse: collapse;
   background-color: #E6F7D9;
-  font-size: 15px;
+  font-size: 20px;
   height: 100%;
 }
 #headerRow{
       font-size: 30px;
-      padding: 20px;
+      padding: 10px;
       text-align: left;
       border-bottom: 3px solid black;
     }
