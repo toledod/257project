@@ -294,12 +294,12 @@ jokeHold{
 }
 .jokeHold .joke {
   visibility: hidden;
-  transition: visibility 0.2s, font-size 0.2s;
+  transition: visibility 1s;
 }
 
 .jokeHold:hover .joke {
   visibility: visible;
-  font-size: 30px;
+  font-size: 60px;
 }
 
 @keyframes smallz{
