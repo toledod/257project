@@ -294,6 +294,10 @@ input[type="date"]::-webkit-datetime-edit-year-field
   font-size: 40px;
 }
 
+.buttonSur{
+  font-size: 30px;
+}
+
 @keyframes smallz{
     from{
         transform: scale(100%);
