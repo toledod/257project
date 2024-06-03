@@ -201,10 +201,10 @@ input[type="date"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     position: relative;
-    width: 2.5em; /* Adjust width as needed */
-    height: 2.5em; /* Adjust height as needed */
+    width: 4.5em;
+    height: 4.5em;
     color: transparent;
-    font-size: 16px;
+    font-size: 26px;
     border: none;
     cursor: pointer;
     background: url('/static/pictures/calanderICON.png') no-repeat center;
