@@ -157,7 +157,6 @@
 }
 
 
-
 .dayDisplay{
   padding: 20px;
   text-align: center;
@@ -191,9 +190,8 @@
 
 
 #tablemonth{
+  font-family: Helvetica;
   color: black;
-  border: 1px solid black;
-  border-top: 0px solid black;
   border-collapse: collapse;
   background-color: #E6F7D9;
 }
@@ -204,7 +202,7 @@
       text-align: left;
       border-bottom: 2px solid black;
     }
-tr{
+td{
   padding: 10px;
 }
 
