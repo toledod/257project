@@ -17,8 +17,7 @@
   <p id = songNameHome>
     {{ someTitle }}
   </p>
- <p>
-    DAILY RANK: {{ someRank }} on {{ someDate }}
+ <p id = "formattedDate">
   </p>
   <p>
     EXPLICIT?: {{ explict }}
@@ -30,3 +29,15 @@
 </div>
 </body>
 
+<script>
+  var dateString = "{{ someDate }}"
+  function formatDate(dateString) {
+        date = new Date(dateString);
+        day = date.getDate().toString().padStart(2, '0');
+        month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+        year = date.getFullYear();
+        return `${month}/${day}/${year}`;
+    }
+  var formattedDate = formatDate(dateString);
+        document.getElementById("formattedDate").innerText = "DAILY RANK: {{ someRank }} on " + formattedDate;
+</script>
