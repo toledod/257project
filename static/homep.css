@@ -125,10 +125,7 @@
 .aboutNav:hover{
   color: white;
   text-decoration: none;
-}
-
-.fade-out{
-  opacity: 0;
+  transition-duration: 0.4s;
 }
 
 
@@ -153,6 +150,7 @@
 .monthsForBar:hover{
   color: white;
   text-decoration: none;
+  transition-duration: 0.4s;
 }
 
 
