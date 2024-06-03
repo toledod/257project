@@ -288,9 +288,9 @@ input[type="date"]::-webkit-datetime-edit-year-field
   height: 100vh; /* Adjust as needed */
   font-size: 30px;
 }
-jokeHold{
+.jokeHold{
   display: flex;
-  font-size: 600px;
+  font-size: 80px;
 }
 .jokeHold .joke {
   visibility: hidden;
