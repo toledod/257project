@@ -124,7 +124,7 @@ def surprise():
         val = random.randint(0, 29)
         
     else:
-        sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 EXTRACT(MONTH FROM date) = 4 ORDER BY energy DESC"
+        sql = "SELECT * FROM spotify WHERE country = 'US' AND EXTRACT(YEAR FROM date) = 2024 AND EXTRACT(MONTH FROM date) = 4 ORDER BY energy DESC"
         cur.execute(sql)
         result = cur.fetchmany(30)
         val = random.randint(0, 29)
