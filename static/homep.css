@@ -36,8 +36,9 @@
 .buttonDesc{
   display: none;
 }
-.big-button:hover + .buttonDesc{
-  display: flex;
+
+.linkInButton:hover .buttonDesc {
+  display: block;
 }
 
 
