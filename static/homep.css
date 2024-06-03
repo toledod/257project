@@ -168,6 +168,7 @@
   color: #56992A;
   background-color: rgba(0, 0, 0, 0);
   font-size: 40px;
+  transition-duration: 0.3s;
 }
 
 #pickMonthDay2{
