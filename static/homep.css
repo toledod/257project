@@ -193,16 +193,20 @@
 #tablemonth{
   color: black;
   border: 1px solid black;
+  border-top: 0px solid black;
   border-collapse: collapse;
   background-color: #92F34C;
 }
 
 #headerRow{
       font-size: 30px;
-      padding: 8px;
+      padding: 20px;
       text-align: left;
       border-bottom: 2px solid black;
     }
+tr{
+  padding: 10px;
+}
 
 
 input[type="date"] {
