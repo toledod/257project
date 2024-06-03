@@ -33,12 +33,6 @@
   animation: smallz 850ms linear infinite alternate;
 }
 
-.buttonDesc{
-  display: none;
-  font-family: Helvetica;
-  color: black;
-}
-
 .linkInButton:hover .buttonDesc {
   display: block;
 }
