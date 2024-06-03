@@ -13,7 +13,8 @@
 
 .big-button{
   display: flex;
-  align-items: flex-end; 
+  align-items: center;
+  justify-content: end;
   padding: 5px;
   margin: 0px;
   font-size: 6vw;
@@ -38,24 +39,28 @@
 }
 
 
-.linkInButton{
+.linkInButton {
   display: flex;
-  flex: 1 1 0;
-  justify-content: space-between;
-  text-align: end;
+  width: auto;
+  justify-content: flex-end;
   text-decoration: none;
+  text-align: end;
+  box-sizing: border-box;
 }
 
-.buttonHolder{
+.buttonHolder {
   background-color: #86D354;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: center;
   text-align: end;
   font-family: Helvetica;
-  padding: 0px;
-}
+  padding: 1vw;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  }
 
 .songHolderHome{
   text-align: left;
