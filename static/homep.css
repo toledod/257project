@@ -182,7 +182,7 @@
   background-color: rgba(0, 0, 0, 0);
   font-size: 40px;
   transition-duration: 0.2s;
-  animation: smallz 850ms linear infinite alternate;
+  animation: smallz2 650ms linear infinite alternate;
 }
 
 /* MONTH STUFF */
@@ -318,6 +318,15 @@ input[type="date"]::-webkit-datetime-edit-year-field
     }
     to{
         transform: scale(99%);
+    }
+}
+
+@keyframes smallz2{
+    from{
+        transform: scale(100%);
+    }
+    to{
+        transform: scale(90%);
     }
 }
 
