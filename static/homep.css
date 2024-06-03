@@ -278,6 +278,9 @@ input[type="date"]::-webkit-datetime-edit-year-field
 .subText{
   font-size: 30px;
 }
+#picOfUs{
+  position: center;
+}
 
 @keyframes smallz{
     from{
