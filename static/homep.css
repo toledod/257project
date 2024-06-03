@@ -70,17 +70,17 @@
 }
 
 #songNameHome{
-  font-size: 10vw; /* Reset the font size to the default value */
-  display: flex; /* Allows the text to scale down */
+  font-size: 8vw;
+  display: flex;
   padding: 0;
   margin: 0px;
-  height: 40%;
+  height: 38%;
 }
 
 #songArtistHome{
   padding: 0;
   margin: 0px;
-  font-size: 3vw;
+  font-size: 4vw;
   opacity: 1;
   transition: opacity 5s ease-out;
 }
