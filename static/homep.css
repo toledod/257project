@@ -41,7 +41,7 @@
 
 .linkInButton {
   display: flex;
-  width: 100%;
+  width: 120px;
   justify-content: flex-end;
   text-decoration: none;
   text-align: end;
@@ -189,15 +189,15 @@
 }
 
 
-
-
 #tablemonth{
   color: black;
   border: 1px solid black;
   border-collapse: collapse;
+  background-color: #f2f2f2;
 }
 
 #headerRow{
+      font-size: 10px;
       padding: 8px;
       text-align: left;
       border-bottom: 2px solid black;
