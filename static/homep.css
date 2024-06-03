@@ -174,16 +174,16 @@
   font-size: 40px;
   transition-duration: 0.2s;
   padding: 30px;
-  margin: 20pxl;
+  margin: 0px;
 }
 .navDayButton:hover {
   color: #56992A;
   border: 2px solid transparent;
   background-color: rgba(0, 0, 0, 0);
-  font-size: 42px;
+  font-size: 40px;
   transition-duration: 0.2s;
-  padding: 30px;
-  margin: 20pxl;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 /* MONTH STUFF */
