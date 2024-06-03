@@ -296,7 +296,7 @@ input[type="date"]::-webkit-datetime-edit-year-field
 
 #buttonSur{
   display: flex;
-  justify-content: center;
+  align-items: right;
   font-size: 30px;
 }
 
