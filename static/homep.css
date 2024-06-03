@@ -228,8 +228,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 200%;
+    height: 200%;
     color: transparent;
     background: none;
     cursor: pointer;
