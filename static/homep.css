@@ -253,6 +253,33 @@ input[type="date"]::before {
 input[type="date"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: transparent;
 }
+/* Additional styles to hide placeholder text */
+input[type="date"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: transparent;
+}
+
+input[type="date"]::-moz-placeholder { /* Firefox 19+ */
+  color: transparent;
+}
+
+input[type="date"]:-ms-input-placeholder { /* IE 10+ */
+  color: transparent;
+}
+
+input[type="date"]:-moz-placeholder { /* Firefox 18- */
+  color: transparent;
+}
+
+/* Additional styles to hide value text for different states */
+input[type="date"]::-webkit-datetime-edit-year-field,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+    color: transparent;
+}
 
 
 @keyframes smallz{
