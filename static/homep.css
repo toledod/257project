@@ -35,6 +35,8 @@
 
 .buttonDesc{
   display: none;
+  font-family: Helvetica;
+  color: black;
 }
 
 .linkInButton:hover .buttonDesc {
@@ -45,7 +47,7 @@
 .linkInButton{
   display: flex;
   flex: 1 1 0;
-  justify-content: flex-end;
+  justify-content: space-between;
   text-align: end;
   text-decoration: none;
 }
