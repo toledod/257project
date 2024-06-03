@@ -280,16 +280,9 @@ input[type="date"]::-webkit-datetime-edit-year-field
   font-size: 30px;
 }
 .comment{
-  font-size: 30px;
+  font-size: 25px;
 }
-.comment .joke {
-  visibility: hidden;
-  font-size: 30px;/* Hide the joke initially */
-}
-.comment:hover .joke{
-  visibility: visible;
-  font-size: 30px;
-}
+
 #picOfus{
   display: flex;
   justify-content: center; /* Center horizontally */
