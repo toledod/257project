@@ -156,7 +156,6 @@
   transition-duration: 0.4s;
 }
 
-
 .dayDisplay{
   padding: 20px;
   text-align: center;
@@ -195,7 +194,8 @@
   border-collapse: collapse;
   background-color: #E6F7D9;
   font-size: 20px;
-  padding: 5px;
+  padding: 20px;
+  height: 100%;
 }
 #headerRow{
       font-size: 30px;
