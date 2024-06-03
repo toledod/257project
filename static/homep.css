@@ -70,6 +70,9 @@
 }
 
 #songNameHome{
+  font-size: 100%; /* Reset the font size to the default value */
+  display: inline-block; /* Allows the text to scale down */
+  max-width: 100%;
   padding: 0;
   margin: 0px;
   font-size: 7vw;
