@@ -195,10 +195,6 @@
   border-collapse: collapse;
   background-color: #E6F7D9;
 }
-td{
-  padding: 8px;
-  font-size: 25px;
-}
 #headerRow{
       font-size: 30px;
       padding: 20px;
@@ -206,6 +202,10 @@ td{
       border-bottom: 3px solid black;
     }
 
+td{
+  padding: 8px;
+  font-size: 23px;
+}
 
 input[type="date"] {
     appearance: none;
