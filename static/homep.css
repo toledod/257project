@@ -154,9 +154,11 @@
   font-size: 40px;
 }
 
-.pickMonthDay{
-  text-align: center;
-  margin-top: 20px;
+#pickMonthDay2{
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .navDayButton{
@@ -171,17 +173,13 @@
   color: #56992A;
   border: 2px solid transparent;
   background-color: rgba(0, 0, 0, 0);
-  font-size: 50px;
+  font-size: 42px;
   transition-duration: 0.2s;
   padding: 30px
 }
 
-#pickMonthDay2{
-  display: flex;
-  flex: 1 1 0;
-  align-items: center;
-  justify-content: center;
-}
+
+
 
 #tablemonth{
   color: black;
