@@ -291,7 +291,10 @@ input[type="date"]::-webkit-datetime-edit-year-field
   font-size: 30px;
 }
 #picOfus{
-  position: center;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Adjust as needed */
 }
 
 @keyframes smallz{
